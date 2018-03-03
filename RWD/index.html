@@ -19,7 +19,7 @@
           </form>
       </div>
     </div>
-
+  <div class="mainbody">
     <div class="category">
       <div id="catrgory_item">
         <a class="active"> Activity Partners (21) </a>
@@ -37,9 +37,40 @@
     </div>
 
     <div id="main_list">
-      <div class="item" id="item_1"></div>
-      <div class="item" id="item_2"></div>
+      <table>
+        <tr>
+
+          <td>photo</td>  <!--have photo or not-->
+          <td>post date</td>
+          <td>favorite</td>  <!--has been marked as favorite by user? -->
+          <td>title</td>
+          <!--<td>classification</td>  &lt;!&ndash;should we have a col to identify the classification like book ? vehicle ? jobs? &ndash;&gt;-->
+          <td>price</td>
+          <td>note</td>
+        </tr>
+        <!--should read each sql obs as one <tr></tr> into the <table></table>  -->
+        <tr>
+          <td></td>
+          <td>Mar 3rd</td>
+          <td><image src="gigem.jpg" height="12" width="12"></image></td>
+          <td>"Mobile first"</td>
+          <td>$12</td>
+          <td>ISTEM 631 required textbook </td>
+        </tr>
+        <tr>
+          <td><image src="picture.png" height="12" width="12"></image></td>
+          <td>Mar 2rd</td>
+          <td><image src="gigem.jpg" height="12" width="12"></image></td>
+          <td>"Sublease 2250 Dartmouth 2b2b"</td>
+          <td>$520 pe rmonth</td>
+          <td></td>
+        </tr>
+      </table>
+
+      <!--<div class="item" id="item_1">1</div>-->
+      <!--<div class="item" id="item_2">2</div>-->
     </div>
+  </div>
   </div>
 </div>
 
