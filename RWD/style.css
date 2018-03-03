@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     margin: 0 auto;
+    border: 0px;
 }
 
 body {
@@ -29,13 +30,42 @@ body {
 
 .nav_bar_item a{
   height: 50px;
-  width: 240px;
+  width: 200px;
   float:left;
   text-align: center;
   padding: 15px 0px 15px 0px;
 }
 .nav_bar_item a:hover{
  background-color: #332c2c;
+}
+
+.search_bar {
+  height: 50px;
+  width: 320px;
+  float: right;
+  margin-right: 20px;
+}
+
+.input_bar{
+  height: 40px;
+  width: 250px;
+  margin-top: 5px;
+  border-radius: 10px;
+  float: left;
+}
+
+.submit_buttom {
+  float: left;
+  height: 40px;
+  width: 60px;
+  margin-top: 5px;
+  margin-left: 5px;
+  border-radius: 10px;
+}
+
+.submit_buttom:hover {
+  background-color: #332c2c;
+  color: #ffffff;
 }
 
 /* category list */
