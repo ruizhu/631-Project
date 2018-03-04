@@ -11,18 +11,31 @@ body {
 
 .container{
   height:1200px;
-  max-width: 1200px;
+  max-width: 80%;
   background-color: #fbf6ea;
 }
 
 .logo_bar{
-  height: 240px;
-  width: inherit;
-  background-image: url("image/logo_bar_background.png");
+  height: 161px;
+  width: 100%;
+  background-color: #500000;
+}
+.logo_bar_left{
+  height: inherit;
+  width: 50%;
+  background-image: url("image/logo_bar_background_left.png");
+  background-size:contain;
+  background-repeat: no-repeat;
+  float: left;
+}
+.logo_bar_right{
+  height: inherit;
+  width: 50%;
+  background-image: url("image/logo_bar_background_right.png");
+  background-position: right;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: right;
-  background-color: #500000;
+  float: right;
 }
 
 .logo {
@@ -41,7 +54,8 @@ body {
   width: 17.5%;
   float:left;
   text-align: center;
-  padding: 15px 0px 15px 0px;
+  font-size: 1.5em;
+  padding: 10px 0px 1px 0px;
 }
 .nav_bar_item a:hover{
  background-color: #332c2c;
@@ -50,37 +64,39 @@ body {
 .search {
   width: 30%;
   float: right;
-  margin-right: 0px;
 }
 .search_input{
-  height: 36px;
-  width: 80%;
-  margin: 7px 0px 7px 44px;
+  height: 34px;
+  width: 84%;
+  margin: 8px 4% 8px 8%;
   border-radius: 6px;
   float: left;
   overflow: hidden;
 }
 
 .search_button {
-  float: left;
-  height: 36px;
-  width: 46px;
-  margin: 7px 0px 7px -46px;
-  padding: 6px;
+  height: 34px;
+  width: 15%;
+  margin: 8px 4% 8px -18.333333% ;
+  padding: 0.5%;
   border-radius: 6px;
+  float: right;
   overflow: hidden;
 }
-
-.submit_button:hover {
-  background-color: #332c2c;
-  color: #ffffff;
+.search_button:hover {
+  filter: invert(100%);
+}
+#icon_search{
+  width: 60%;
+  max-width: 30px;
+  max-height: 30px;
 }
 
 /* category list */
 .category {
   width: 20%;
   float:left;
-  margin: 12px 6px 0 12px;
+  margin: 12px 1% 0 1%;
   background-color: #E7DED0;
   color: #500000;
   border-radius: 6px;
@@ -102,9 +118,10 @@ body {
 /* List of all post within selected category */
 .main_list{
   width: 77%;
-  margin: 1% 1% 0 0.5%;
+  margin: 12px 1% 0 0;
   float:right;
   border-radius: 6px;
+  overflow: auto;
 }
 .main_list table{
   width: 100%;
@@ -162,6 +179,6 @@ body {
 }
 
 .icon {
-  width: 25px;
-  height: 25px;
+  width: 100%;
+  height: auto;
 }
