@@ -26,6 +26,11 @@ body {
   background-color: #500000;
 }
 
+.logo {
+  height: inherit;
+  width:auto;
+}
+
 .nav_bar{
   height: 50px;
   width: 1200px;
@@ -67,6 +72,21 @@ body {
 .submit_buttom:hover {
   background-color: #332c2c;
   color: #ffffff;
+}
+
+#icon_search {
+  height: 20px;
+  width: 20px;
+}
+
+#icon_picture {
+  height: 12.6px;
+  width: 24px;
+}
+
+#icon_saved {
+  height:20px;
+  width: 20px;
 }
 
 .mainbody{
@@ -118,7 +138,5 @@ body {
 }
 
 .icon {
-  width: 20px;
-  height: 20px;
-
+  position: relative;
 }
