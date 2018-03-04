@@ -21,14 +21,14 @@ body {
 }
 
 .logo_bar{
-  height: 161.803398875px;
+  height: 240px;
   width: 1200px;
   background-color: #500000;
 }
 
 .logo {
-  height: inherit;
-  width:auto;
+  width: inherit;
+  margin-top: 15px;
 }
 
 .nav_bar{
