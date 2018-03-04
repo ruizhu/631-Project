@@ -21,6 +21,11 @@ body {
   background-color: #500000;
 }
 
+.logo {
+  height: inherit;
+  width:auto;
+}
+
 .nav_bar{
   height: 50px;
   width: 1200px;
@@ -63,6 +68,29 @@ body {
   color: #ffffff;
 }
 
+<<<<<<< HEAD
+=======
+#icon_search {
+  height: 20px;
+  width: 20px;
+}
+
+#icon_picture {
+  height: 12.6px;
+  width: 24px;
+}
+
+#icon_saved {
+  height:20px;
+  width: 20px;
+}
+
+.mainbody{
+    width: 1040px;
+    float:left;
+}
+
+>>>>>>> 16258b01b17d7d4f9533871c5f877efa8a6bb23f
 /* category list */
 .category {
   width: 240px;
@@ -143,6 +171,7 @@ body {
   border-color:inherit;
 }
 
+<<<<<<< HEAD
 #list_column_price {
   width:150px;
   padding: 1px 10px 1px 10px;
@@ -153,4 +182,8 @@ body {
 .icon {
   width: 25px;
   height: 25px;
+=======
+.icon {
+  position: relative;
+>>>>>>> 16258b01b17d7d4f9533871c5f877efa8a6bb23f
 }
