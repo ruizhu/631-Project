@@ -11,13 +11,13 @@ body {
 
 .container{
   height:1200px;
-  width: 1200px;
+  max-width: 1200px;
   background-color: #fbf6ea;
 }
 
 .logo_bar{
   height: 240px;
-  width: 1200px;
+  width: inherit;
   background-image: url("image/logo_bar_background.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -32,13 +32,13 @@ body {
 
 .nav_bar{
   height: 50px;
-  width: 1200px;
+  width: inherit;
   background-color: #360000;
   color: #ffffff;
 }
 .nav_bar_item a{
   height: 50px;
-  width: 210px;
+  width: 17.5%;
   float:left;
   text-align: center;
   padding: 15px 0px 15px 0px;
@@ -48,25 +48,29 @@ body {
 }
 
 .search {
-  width: 340px;
+  width: 30%;
   float: right;
   margin-right: 0px;
 }
 .search_input{
   height: 36px;
-  width: 277px;
+  width: 80%;
   margin: 7px 0px 7px 44px;
   border-radius: 6px;
   float: left;
+  overflow: hidden;
 }
+
 .search_button {
   float: left;
   height: 36px;
   width: 46px;
-  margin: 7px 0px 0px -39px;
+  margin: 7px 0px 7px -46px;
   padding: 6px;
   border-radius: 6px;
+  overflow: hidden;
 }
+
 .submit_button:hover {
   background-color: #332c2c;
   color: #ffffff;
@@ -74,7 +78,7 @@ body {
 
 /* category list */
 .category {
-  width: 240px;
+  width: 20%;
   float:left;
   margin: 12px 6px 0 12px;
   background-color: #E7DED0;
@@ -97,13 +101,13 @@ body {
 
 /* List of all post within selected category */
 .main_list{
-  width: 924px;
-  margin: 12px 12px 0 6px;
+  width: 77%;
+  margin: 1% 1% 0 0.5%;
   float:right;
   border-radius: 6px;
 }
 .main_list table{
-  width: 924px;
+  width: 100%;
   border-collapse: collapse;
   border-radius: 6px;
 }
