@@ -90,9 +90,11 @@ body {
     background-color: #5F574F;
     color: #ffffff;
 }
+
 .main_list{
-    width: 640px;
-    float:left;
+    width: 780px;
+    margin-top: 12px;
+    float:right;
 }
 .mainbody{
     width: 1040px;
