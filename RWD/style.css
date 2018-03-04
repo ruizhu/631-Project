@@ -54,16 +54,16 @@ body {
 }
 .search_input{
   height: 36px;
-  width: 240px;
-  margin: 7px 0px 0px 44px;
+  width: 277px;
+  margin: 7px 0px 7px 44px;
   border-radius: 6px;
   float: left;
 }
 .search_button {
   float: left;
   height: 36px;
-  width: 36px;
-  margin: 7px 0px 0px 6px;
+  width: 46px;
+  margin: 7px 0px 0px -39px;
   padding: 6px;
   border-radius: 6px;
 }
@@ -76,8 +76,7 @@ body {
 .category {
   width: 240px;
   float:left;
-  margin-left: 12px;
-  margin-top: 12px;
+  margin: 12px 6px 0 12px;
   background-color: #E7DED0;
   color: #500000;
   border-radius: 6px;
@@ -99,8 +98,7 @@ body {
 /* List of all post within selected category */
 .main_list{
   width: 924px;
-  margin-top: 12px;
-  margin-right: 12px;
+  margin: 12px 12px 0 6px;
   float:right;
   border-radius: 6px;
 }
