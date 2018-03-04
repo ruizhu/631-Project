@@ -12,14 +12,11 @@
       <div class="nav_bar_item"> <a> Saved Items </a> </div>
       <div class="nav_bar_item"> <a> Account </a> </div>
       <div class="nav_bar_item"> <a> About </a> </div>
-      <div class="search_bar">
-          <form>
-            <input class="input_bar" type="text" placeholder=" Search..." name="search">
-            <button class="submit_buttom" type="submit">Search</button>
-          </form>
+      <div class="search">
+        <input class="search_input" type="text" placeholder=" Search..." name="search">
+        <button class="search_submit" type="submit"><image src="imag/search.png" class="icon" id="icon_search"></image></button>
       </div>
     </div>
-  <div class="mainbody">
     <div class="category">
       <div id="catrgory_item">
         <a class="active"> Activity Partners (21) </a>
@@ -32,45 +29,35 @@
         <a> Rideshare & Carpools (11) </a>
         <a> Sublet & Roommates (17) </a>
         <a> Vehicles (67) </a>
-
       </div>
     </div>
 
-    <div id="main_list">
+    <div class="main_list">
       <table>
-        <tr>
-
-          <td>photo</td>  <!--have photo or not-->
-          <td>post date</td>
-          <td>favorite</td>  <!--has been marked as favorite by user? -->
-          <td>title</td>
-          <!--<td>classification</td>  &lt;!&ndash;should we have a col to identify the classification like book ? vehicle ? jobs? &ndash;&gt;-->
-          <td>price</td>
-          <td>note</td>
-        </tr>
-        <!--should read each sql obs as one <tr></tr> into the <table></table>  -->
+      <!--Table structure:
+      1st column: have photo or not, item with photo show a camera icon, blank if no photo;
+      2nd column: Post date of the classfied Ad, post are always order by date, item post latest will display at top;
+      3rd column: saved or not, saved item show a bookmark sign, blank if not saved;
+      4th column: Title, title of the post, also act as a link, user can click in for more information
+      5th column: Price, price of the item, data store in text format, gives user more flecibility in express price.
+      -->
+      <!-- Data below should read each sql obs as one table row into the table  -->
         <tr>
           <td></td>
           <td>Mar 3rd</td>
-          <td><image src="gigem.jpg" height="12" width="12"></image></td>
+          <td><image src="imag/saved.png" class="icon" id="icon_saved"></image></td>
           <td>"Mobile first"</td>
           <td>$12</td>
-          <td>ISTEM 631 required textbook </td>
         </tr>
         <tr>
-          <td><image src="picture.png" height="12" width="12"></image></td>
+          <td><image src="imag/picture.png" class="icon" id="icon_picture"></image></td>
           <td>Mar 2rd</td>
-          <td><image src="gigem.jpg" height="12" width="12"></image></td>
+          <td></td>
           <td>"Sublease 2250 Dartmouth 2b2b"</td>
-          <td>$520 pe rmonth</td>
           <td></td>
         </tr>
       </table>
-
-      <!--<div class="item" id="item_1">1</div>-->
-      <!--<div class="item" id="item_2">2</div>-->
     </div>
-  </div>
   </div>
 </div>
 

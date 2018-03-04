@@ -14,6 +14,11 @@ body {
   width: 1200px;
   background-color: #E7DED0;
 }
+.container{
+    height:1200px;
+    width: 1200px;
+    float:left;
+}
 
 .logo_bar{
   height: 161.803398875px;
@@ -27,7 +32,6 @@ body {
   background-color: #360000;
   color: #ffffff;
 }
-
 .nav_bar_item a{
   height: 50px;
   width: 200px;
@@ -39,30 +43,27 @@ body {
  background-color: #332c2c;
 }
 
-.search_bar {
-  height: 50px;
+.search {
   width: 320px;
   float: right;
   margin-right: 20px;
 }
-
-.input_bar{
-  height: 40px;
+.search_input{
+  height: 32px;
   width: 250px;
-  margin-top: 5px;
-  border-radius: 10px;
+  margin-left: 25px;
+  margin-top: 9px;
+  border-radius: 8px;
   float: left;
 }
-
-.submit_buttom {
+.search_submit {
   float: left;
-  height: 40px;
-  width: 60px;
-  margin-top: 5px;
-  margin-left: 5px;
-  border-radius: 10px;
+  height: 32px;
+  width: 32px;
+  margin-top: 9px;
+  margin-left: 4px;
+  border-radius: 8px;
 }
-
 .submit_buttom:hover {
   background-color: #332c2c;
   color: #ffffff;
@@ -76,7 +77,6 @@ body {
   margin-top: 12px;
   background-color: #ffffff;
 }
-
 /* Category list links */
 .category a {
     color: #50000;
@@ -84,17 +84,16 @@ body {
     text-decoration: none;
     display: block;
 }
-
 /* Category list change color on hover */
 .category a:hover a:active{
     background-color: #5F574F;
     color: #ffffff;
 }
-.main_list{
-    width: 640px;
-    float:left;
-}
-.mainbody{
-    width: 1040px;
+
+/* List of all post within selected category */
+.main_list table{
+    width: 924px;
+    margin-left: 12px;
+    margin-top: 12px;
     float:left;
 }
