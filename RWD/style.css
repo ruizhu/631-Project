@@ -1,23 +1,18 @@
 * {
-    box-sizing: border-box;
-    margin: 0 auto;
-    border: 0px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  border: 0px;
 }
 
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-family: BentonSansRegular, "Arial Narrow", Arial, sans-serif;
 }
 
-.page_container{
+.container{
   height:1200px;
   width: 1200px;
-  background-color: #E7DED0;
-}
-.container{
-    height:1200px;
-    width: 1200px;
-    float:left;
+  background-color: #fbf6ea;
 }
 
 .logo_bar{
@@ -34,7 +29,7 @@ body {
 }
 .nav_bar_item a{
   height: 50px;
-  width: 200px;
+  width: 210px;
   float:left;
   text-align: center;
   padding: 15px 0px 15px 0px;
@@ -44,34 +39,28 @@ body {
 }
 
 .search {
-  width: 320px;
+  width: 340px;
   float: right;
-  margin-right: 20px;
+  margin-right: 0px;
 }
 .search_input{
-  height: 32px;
-  width: 250px;
-  margin-left: 25px;
-  margin-top: 9px;
-  border-radius: 8px;
+  height: 36px;
+  width: 240px;
+  margin: 7px 0px 0px 44px;
+  border-radius: 6px;
   float: left;
 }
-.search_submit {
+.search_button {
   float: left;
-  height: 32px;
-  width: 32px;
-  margin-top: 9px;
-  margin-left: 4px;
-  border-radius: 8px;
+  height: 36px;
+  width: 36px;
+  margin: 7px 0px 0px 6px;
+  padding: 6px;
+  border-radius: 6px;
 }
-.submit_buttom:hover {
+.submit_button:hover {
   background-color: #332c2c;
   color: #ffffff;
-}
-
-.mainbody{
-    width: 1040px;
-    float:left;
 }
 
 /* category list */
@@ -80,45 +69,88 @@ body {
   float:left;
   margin-left: 12px;
   margin-top: 12px;
-  background-color: #ffffff;
+  background-color: #E7DED0;
+  color: #500000;
+  border-radius: 6px;
 }
 /* Category list links */
 .category a {
-    color: #50000;
-    padding: 10px;
-    text-decoration: none;
-    display: block;
+  color: #50000;
+  font: bold;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
 }
 /* Category list change color on hover */
-.category a:hover a:active{
-    background-color: #5F574F;
-    color: #ffffff;
+.category a:hover{
+  background-color: #5F574F;
+  color: #ffffff;
 }
 
 /* List of all post within selected category */
 .main_list{
-    width: 924px;
-    margin-top: 12px;
-    margin-right: 12px;
-    float:right;
+  width: 924px;
+  margin-top: 12px;
+  margin-right: 12px;
+  float:right;
+  border-radius: 6px;
 }
 .main_list table{
-    width: 924px;
+  width: 924px;
+  border-collapse: collapse;
+  border-radius: 6px;
 }
 
-.main_row {
-    height: 40px;
-    width: inherit;
+.main_list tr:nth-child(even){
+  background-color: #FAF0E1;
+  outline: #E7DED0;
+  height: 45px;
+  width: inherit;
+}
+.main_list tr:nth-child(odd){
+  background-color: #E7DED0;
+  outline: #E7DED0;
+  height: 45px;
+  width: inherit;
 }
 
-.main_column {
-    background-color: #744F28;
-    width: auto;
-    padding-left: 5px;
+#list_column_icon{
+  width:45px;
+  padding: 6px 10px 0px 10px;
+  border: none;
+}
+#list_column_date {
+  width:80px;
+  padding: 1px 5px 1px 5px;
+  text-align: center;
+  border: none;
+  color: #500000;
+}
+#list_column_title {
+  width:auto;
+  padding: 1px 10px 1px 10px;
+  text-align: left;
+  border: none;
+}
+#list_column_title a:link, a:visited{
+  text-decoration: none;
+  color: #500000;
+  border: none;
+}
+#list_column_title a:hover{
+  text-decoration: none;
+  color: #836E2C;
+  border-color:inherit;
+}
+
+#list_column_price {
+  width:150px;
+  padding: 1px 10px 1px 10px;
+  text-align: left;
+  color: #500000;
 }
 
 .icon {
-  width: 20px;
-  height: 20px;
-
+  width: 25px;
+  height: 25px;
 }

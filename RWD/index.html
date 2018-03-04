@@ -14,7 +14,7 @@
       <div class="nav_bar_item"> <a> About </a> </div>
       <div class="search">
         <input class="search_input" type="text" placeholder=" Search..." name="search">
-        <button class="search_submit" type="submit"><image src="imag/search.png" class="icon" id="icon_search"></image></button>
+        <button class="search_button" type="submit"><image src="image/search.png" class="icon" id="icon_search"></image></button>
       </div>
     </div>
     <div class="category">
@@ -42,19 +42,26 @@
       5th column: Price, price of the item, data store in text format, gives user more flecibility in express price.
       -->
       <!-- Data below should read each sql obs as one table row into the table  -->
-        <tr class="main_row">
-          <td class="main_column"></td>
-          <td class="main_column">Mar 3rd</td>
-          <td class="main_column"><image src="image/saved.png" class="icon" id="icon_saved"></image></td>
-          <td class="main_column"><a href="">Mobile first</a></td>
-          <td class="main_column">$12</td>
+        <tr>
+          <td id="list_column_icon"></td>
+          <td id="list_column_date">Mar 3</td>
+          <td id="list_column_title"><a href="">Mobile first</a></td>
+          <td id="list_column_icon"><image src="image/offering.png" class="icon" id="icon_saved"></image></td>
+          <td id="list_column_price">$12 or best offer</td>
         </tr>
-        <tr class="main_row">
-          <td class="main_column"><image src="imag/picture.png" class="icon" id="icon_picture"></image></td>
-          <td class="main_column">Mar 2rd</td>
-          <td class="main_column"><image src="image/saved.png" class="icon" id="icon_saved"></td>
-          <td class="main_column"><a href="">Sublease 2250 Dartmouth 2b2b</a></td>
-          <td class="main_column"></td>
+        <tr>
+          <td id="list_column_icon"><image src="image/picture.png" class="icon" id="icon_picture"></image></td>
+          <td id="list_column_date">Mar 3</td>
+          <td id="list_column_title"><a href="">Sublease 2250 Dartmouth 2b2b</a></td>
+          <td id="list_column_icon"><image src="image/offering.png" class="icon" id="icon_saved"></td>
+          <td id="list_column_price"> 550 obo</td>
+        </tr>
+        <tr>
+          <td id="list_column_icon"><image src="image/picture.png" class="icon" id="icon_picture"></image></td>
+          <td id="list_column_date">Mar 2</td>
+          <td id="list_column_title"><a href="">Need ride to Houston during spring break </a></td>
+          <td id="list_column_icon"><image src="image/looking.png" class="icon" id="icon_saved"></td>
+          <td id="list_column_price"> share gas </td>
         </tr>
       </table>
     </div>
