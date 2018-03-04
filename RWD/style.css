@@ -114,6 +114,11 @@ body {
   background-color: #5F574F;
   color: #ffffff;
 }
+.catrgory_item_active{
+  background-color: #5F574F;
+  color: #ffffff;
+  border-radius: inherit;
+}
 
 /* List of all post within selected category */
 .main_list{
