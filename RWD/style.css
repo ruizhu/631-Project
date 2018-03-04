@@ -69,10 +69,15 @@ body {
   color: #ffffff;
 }
 
+.mainbody{
+    width: 1040px;
+    float:left;
+}
+
 /* category list */
 .category {
   width: 240px;
-    float:left;
+  float:left;
   margin-left: 12px;
   margin-top: 12px;
   background-color: #ffffff;
@@ -90,22 +95,31 @@ body {
     color: #ffffff;
 }
 
-<<<<<<< HEAD
 /* List of all post within selected category */
-.main_list table{
-    width: 924px;
-    margin-left: 12px;
-    margin-top: 12px;
-    float:left;
-}
-=======
 .main_list{
-    width: 780px;
+    width: 924px;
     margin-top: 12px;
+    margin-right: 12px;
     float:right;
 }
-.mainbody{
-    width: 1040px;
-    float:left;
+.main_list table{
+    width: 924px;
 }
->>>>>>> 64bddc33c112a8f484cdd286012a69a4b47d4f92
+
+.main_row {
+    height: 40px;
+    width: inherit;
+}
+
+.main_column {
+    background-color: #744F28;
+    width: auto;
+    border-radius: 10px;
+    padding-left: 5px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+
+}
