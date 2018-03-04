@@ -90,6 +90,7 @@ body {
     color: #ffffff;
 }
 
+<<<<<<< HEAD
 /* List of all post within selected category */
 .main_list table{
     width: 924px;
@@ -97,3 +98,14 @@ body {
     margin-top: 12px;
     float:left;
 }
+=======
+.main_list{
+    width: 780px;
+    margin-top: 12px;
+    float:right;
+}
+.mainbody{
+    width: 1040px;
+    float:left;
+}
+>>>>>>> 64bddc33c112a8f484cdd286012a69a4b47d4f92
