@@ -66,6 +66,7 @@ body {
   text-align: center;
   font-size: 1.5em;
   padding: 10px 0px 1px 0px;
+  decoration: none;
 }
 .nav_bar_item a:hover{
  background-color: #332c2c;
