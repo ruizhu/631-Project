@@ -119,6 +119,7 @@ body {
 .category a:hover{
   background-color: #5F574F;
   color: #ffffff;
+  border-radius: 6px;
 }
 .catrgory_item_active{
   background-color: #5F574F;
