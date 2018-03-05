@@ -1,20 +1,28 @@
+/* Reset Style*/
 * {
   box-sizing: border-box;
   margin: 0 auto;
   border: 0px;
 }
-
+/* Universal control section, body, container and icons*/
 body {
   margin: 0;
   font-family: BentonSansRegular, "Arial Narrow", Arial, sans-serif;
 }
-
 .container{
   height:1200px;
   max-width: 80%;
   background-color: #fbf6ea;
+  position: relative;
+}
+.icon {
+  width: 100%;
+  height: auto;
 }
 
+
+
+/* Logo bar control section*/
 .logo_bar{
   height: 161px;
   width: 100%;
@@ -38,11 +46,9 @@ body {
   float: right;
 }
 
-.logo {
-  width: inherit;
-  margin-top: 15px;
-}
 
+
+/* Nav bar control section*/
 .nav_bar{
   height: 50px;
   width: inherit;
@@ -61,6 +67,7 @@ body {
  background-color: #332c2c;
 }
 
+/* Search box and button section - !!Within Nav bar!!*/
 .search {
   width: 30%;
   float: right;
@@ -73,7 +80,6 @@ body {
   float: left;
   overflow: hidden;
 }
-
 .search_button {
   height: 34px;
   width: 15%;
@@ -92,7 +98,9 @@ body {
   max-height: 30px;
 }
 
-/* category list */
+
+
+/* category list Section */
 .category {
   width: 20%;
   float:left;
@@ -101,7 +109,6 @@ body {
   color: #500000;
   border-radius: 6px;
 }
-/* Category list links */
 .category a {
   color: #50000;
   font: bold;
@@ -109,7 +116,6 @@ body {
   text-decoration: none;
   display: block;
 }
-/* Category list change color on hover */
 .category a:hover{
   background-color: #5F574F;
   color: #ffffff;
@@ -119,6 +125,8 @@ body {
   color: #ffffff;
   border-radius: inherit;
 }
+
+
 
 /* List of all post within selected category */
 .main_list{
@@ -133,7 +141,6 @@ body {
   border-collapse: collapse;
   border-radius: 6px;
 }
-
 .main_list tr:nth-child(even){
   background-color: #FAF0E1;
   outline: #E7DED0;
@@ -147,6 +154,9 @@ body {
   width: inherit;
 }
 
+
+
+/* Define specific list column attribute using id selector*/
 #list_column_icon{
   width:45px;
   padding: 6px 10px 0px 10px;
@@ -175,7 +185,6 @@ body {
   color: #836E2C;
   border-color:inherit;
 }
-
 #list_column_price {
   width:150px;
   padding: 1px 10px 1px 10px;
@@ -183,7 +192,16 @@ body {
   color: #500000;
 }
 
-.icon {
+
+
+.footer{
   width: 100%;
-  height: auto;
+  height: 30px;
+  background-color: #500000;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 5px 0 0 0;
+  position: absolute;
+  bottom: 0;
 }
