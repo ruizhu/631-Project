@@ -4,10 +4,14 @@
   margin: 0 auto;
   border: 0px;
 }
+
+/* Import Open Sans font from google API*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
 /* Universal control section, body, container and icons*/
 body {
   margin: 0;
-  font-family: BentonSansRegular, "Arial Narrow", Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 .container{
   height:1200px;
