@@ -60,7 +60,7 @@ body {
   background-color: #360000;
   color: #ffffff;
 }
-.nav_bar_item a{
+#nav_bar_item a{
   height: 50px;
   width: 17.5%;
   float:left;
@@ -70,13 +70,16 @@ body {
   color: #ffffff;
   text-decoration: none;
 }
-.nav_bar_item a:hover{
- background-color: #332c2c;
+#nav_bar_item a:hover{
+  background-color: #332c2c;
+  text-decoration: none;
 }
-.nav_bar_item a:visited{
- background-color: #332c2c;
- color: #ffffff;
+
+#nav_bar_item a:visited{
+  color: #ffffff;
+  text-decoration: none;
 }
+
 
 /* Search box and button section - !!Within Nav bar!!*/
 .search {
