@@ -36,6 +36,7 @@ body {
   height: inherit;
   width: 50%;
   background-image: url("image/logo_bar_background_left.png");
+  background-position: left;
   background-size:contain;
   background-repeat: no-repeat;
   float: left;
@@ -59,27 +60,26 @@ body {
   background-color: #360000;
   color: #ffffff;
 }
-.nav_bar_item a{
+#nav_bar_item a{
   height: 50px;
   width: 17.5%;
   float:left;
   text-align: center;
   font-size: 1.5em;
   padding: 10px 0px 1px 0px;
-<<<<<<< HEAD
   color: #ffffff;
   text-decoration: none;
-=======
-  decoration: none;
->>>>>>> 64216d6b8548d558a11d9404c7cc4f2b7b7f0d25
 }
-.nav_bar_item a:hover{
- background-color: #332c2c;
+#nav_bar_item a:hover{
+  background-color: #332c2c;
+  text-decoration: none;
 }
-.nav_bar_item a:visited{
- background-color: #332c2c;
- color: #ffffff;
+
+#nav_bar_item a:visited{
+  color: #ffffff;
+  text-decoration: none;
 }
+
 
 /* Search box and button section - !!Within Nav bar!!*/
 .search {
