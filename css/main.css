@@ -1,2 +1,7 @@
 /* Import Open Sans font from google API*/
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+
+.list-group-item{
+  font-size: 0.9rem;
+}
