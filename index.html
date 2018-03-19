@@ -11,14 +11,14 @@
 <!-- -->
 
 <body class="container">
-<header class="container" style="background-color:#500000">
-  <div class="row stick-top">
+<header class="container mb-3" style="background-color:#500000">
+  <div class="row stick-top ">
     <div class="col-md-3 col-12">
       <a href="#index.html">
         <img src="images/logo_bar_background_left.png" class="img-responsive header-img">
       </a>
     </div>
-    <nav class="nav navbar-dark nav-tabs col-md-6 col-12">
+    <nav class="nav navbar-dark col-md-6 col-12">
       <a class="col-4 nav-item nav-link" href="#Account.html">Account</a>
       <a class="col-4 nav-item nav-link" href="#Bookmark.html">Bookmark</a>
       <a class="col-4 nav-item nav-link" href="#post-ad.html">Post Ad</a>
@@ -44,7 +44,7 @@
     </div><!-- close category_list Section-->
 
     <div class="container col-sm-9" id="post_list"><!-- Main List Section-->
-      <table class="table table-responsive table-striped table-hover">
+      <table class="col-12 table table-responsive table-striped table-hover">
       <!--Table structure:
       1st column: have photo or not, item with photo show a camera icon, blank if no photo;
       2nd column: Post date of the classified Ad, post are always order by date, item post latest will display at top;
@@ -53,7 +53,7 @@
       5th column: Price, price of the item, data store in text format, gives user more flecibility in express price.
       -->
       <!-- Data below should read each sql obs as one table row into the table  -->
-        <tr>
+        <tr class="">
           <td class="list_column_icon"></td>
           <td class="list_column_date">Mar 3</td>
           <td class="list_column_title">
