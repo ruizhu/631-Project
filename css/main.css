@@ -13,6 +13,15 @@
 .icon {
   height:15px;
 }
+
+.bg-darkmaroon {
+  background-color: #2F0000;
+}
+
+.bg-darkmaroon:hover {
+  background-color: #140000;
+}
+
 .list_column_date{
 
 }
