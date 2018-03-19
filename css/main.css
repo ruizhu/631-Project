@@ -17,6 +17,19 @@
 .icon {
   height:15px;
 }
+
+.nav-font {
+  font-size: 0.7rem;
+}
+
+.bg-darkmaroon {
+  background-color: #2F0000;
+}
+
+.bg-darkmaroon:hover {
+  background-color: #140000;
+}
+
 .list_column_date{
 
 }
