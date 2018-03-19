@@ -1,13 +1,17 @@
 /* Import Open Sans font from google API*/
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
+.body{
+  font-family: 'Open Sans', sans-serif; 
+}
 
 .list-group-item{
   font-size: 0.9rem;
 }
 
-.header-img {
-  height: 80px;
+#post_list, #post_list a{
+  text-decoration: none;
+  color:#500000;
 }
 
 .icon {
