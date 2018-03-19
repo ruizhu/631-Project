@@ -1,47 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title> Aggie Classified | My Account </title>
-  <link rel="stylesheet" href="css/bootstrap.css">
+  <title> Aggie Classified | Home </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
-  <div class="container">
-    <div class="containter" style="background-color:#500000">
-      <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-11">
-          <a href="index.html">
-              <img src="images/logo_bar_background_left.png" class="img-responsive">
-          </a>
-        </div><!-- column-->
-        <div class="col-lg-6 col-md-6 col-sm-6 hidden-xs">
-          <img src="images/logo_bar_background_right.png" class="img-responsive">
-        </div><!-- column-->
-      </div><!-- row-->
+<!-- backup comment available down here just copy and use. -->
+<!-- -->
+
+<body class="container">
+<header class="container mb-3" style="background-color:#500000">
+  <div class="row">
+    <div class="col-md-3 col-12">
+      <a href="#index.html">
+        <img src="images/logo_bar_background_left.png" class="img-fluid header-img">
+      </a>
     </div>
 
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-nav">
-          <ul class="nav navbar-nav">
-            <li class="active">
-              <a href="#">account</a>
-            </li>
-            <li>
-              <a href="#">favorite</a>
-            </li>
-            <li>
-              <a href="#">about us</a>
-            </li>
-          </ul>
+    <nav class="nav col-md-6 col-12">
+      <a class="col-4 nav-item nav-link align-self-end rounded-top bg-darkmaroon text-white" href="account.html">
+        <img src="images/account.png" class="img-fluid">
+        <span class="d-none d-md-inline nav-font">
+          Account
+        </span>
+      </a>
+
+      <a class="col-4 nav-item nav-link align-self-end rounded-top bg-darkmaroon text-white" href="bookmark.html">
+        <img src="images/bookmark.png" class="img-fluid">
+        <span class="d-none d-md-inline nav-font">
+          Bookmark
+        </span>
+      </a>
+
+      <a class="col-4 nav-item nav-link align-self-end rounded-top bg-darkmaroon text-white" href="post-ad.html">
+        <img src="images/post-ad.png" class="img-fluid">
+        <span class="d-none d-md-inline nav-font">
+          Post Ad
+        </span>
+      </a>
+
+    </nav>
+    <form class=" col-md-3 col-12 align-self-end">
+      <div class="row">
+        <div class="col-1 d-md-none align-self-center"><img src="images/category.png" class="icon"></div>
+
+        <div class="input-group col-11">
+          <input class="rounded-left form-control"  placeholder="Search.." name="search" >
+          <div class="input-group-append">
+            <button class="btn btn-secondary" type="submit"><a href=""><img src="images/search.png" class="icon rounded-right img-fluid"></a></button>
+          </div>
         </div>
       </div>
-    </nav>
+    </form>
 
-    <div class="container-fluid">
-
-    </div>
   </div>
+</header>
+
+<section class="container">
+<section>
+
 </body>
 </html>

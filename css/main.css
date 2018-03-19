@@ -2,7 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 .body{
-  font-family: 'Open Sans', sans-serif; 
+  font-family: 'Open Sans', sans-serif;
 }
 
 .list-group-item{
@@ -30,6 +30,21 @@
   background-color: #140000;
 }
 
+.bg-gray {
+  background-color: #815555;
+}
+
+.bg-gray:hover {
+  background-color: #584343;
+}
+
+.bg-gray:active {
+  background-color: #402B2B;
+}
+
+
+/*
+
 .list_column_date{
 
 }
@@ -44,4 +59,4 @@
 }
 .list_column_price{
 
-}
+} */
