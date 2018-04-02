@@ -11,14 +11,8 @@ a:hover {
     transition: 300ms ease-in-out;
 }
 
-a:focus,
-.btn:focus,
-.btn:active:focus,
-button:focus,
-input[type="file"]:focus,
-input[type="radio"]:focus,
-input[type="checkbox"]:focus {
-    outline: none;
+*:focus {
+    outline: #500000;
 }
 
 .list-group-item{
@@ -59,6 +53,29 @@ input[type="checkbox"]:focus {
 }
 
 /* Post Ad Page Style */
+.post_ad label{
+    color: #500000;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.post_ad small{
+    color: #500000;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.post_ad .form-control{
+    height: 45px;
+    font-size: 18px;
+    color: #500000;
+    border: 2px solid rgba(0,0,0,.15)
+}
+
+.post_ad .form-control:focus{
+    border-color: #4f0101;
+}
+
 .upload_file{
     margin: 35px 0;
 }
@@ -88,14 +105,11 @@ input[type="checkbox"]:focus {
     cursor: pointer;
     margin-left: 2px;
     transition: 0.5s ease-in-out;
-    border-radius: 0;
 }
-.save_1.btn_upload{
-    border-radius: 0;
-}
-.save_1.btn_upload:hover ,
-.save_1.btn_upload:focus ,
-.save_1.btn_upload.active{
+
+.btn_upload:hover ,
+.btn_upload:focus ,
+.btn_upload.active{
     background: linear-gradient(to right ,#5bb95b , #66b065);
     color:  #fff ;
 }
