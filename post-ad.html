@@ -4,6 +4,8 @@
   <title> Aggie Classified | Home </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/bootstrap.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -68,8 +70,103 @@
     </div>
   </header>
 
-<section class="container">
-<section>
+  <section class="post_ad">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h2>Post Ad</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="form-group">
+                  <label for="title">Ad Title</label>
+                  <div class="title_text">
+                    <input type="title" class="form-control" id="title" aria-describedby="title" placeholder="">
+                  </div>
+                  <small id="title" class="form-text">A title is required</small>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="form-group">
+                  <label for="title">Price</label>
+                  <input type="Price" class="form-control" id="title" aria-describedby="title" placeholder="">
+                  <small id="title" class="form-text">A Price is required</small>
+                </div>
+            </div>
+          </div>
+          <div class="space10"></div>
+          <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="form-group">
+                  <label for="contact">Contact</label>
+                  <input type="contact" class="form-control" id="contact" aria-describedby="contact" placeholder="">
+                  <small id="title" class="form-text">Contact information is required</small>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="form-group">
+                  <label for="category">Category</label>
+                  <select class="form-control">
+                    <option></option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                  </select>
+                </div>
+            </div>
+          </div>
+          <div class="space10"></div>
+          <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="form-group">
+                  <label for="purpose">Ad Purpose</label>
+                  <select class="form-control">
+                    <option></option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                  </select>
+                </div>
+            </div>
+          </div>
+          <div class="space10"></div>
+          <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                  <label for="title">Ad Description</label>
+                  <textarea cols="5" rows="5" class="form-control"></textarea>
+                  <!-- <small id="title" class="form-text">A Description is required</small> -->
+                </div>
+            </div>
+          </div>
+          <div class="space10"></div>
+          <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                  <label for="title">Images</label>
+                 <input type="Images" class="form-control" id="title" aria-describedby="title" placeholder="">
+                </div>
+            </div>
+          </div>
+          <div class="space10"></div>
+          <div class="row">
+            <div class="col-12">
+              <h1>New Uploads</h1>
+              <hr>
+              <div class="upload_file">
+                <button type="button" class="btn btn_upload"><i class="fa fa-plus" aria-hidden="true"></i> Upload images... </button>
+                <input type="file" id="myFile">
+              </div>
+              <button type="button" class="btn btn_upload save_1">Save</button>
+              <button type="button"  class="btn btn_cancel">Cancel</button>
+              <div class="space20"></div>
+            </div>
+          </div>
+        </div>
+      </section>
 
 </body>
 </html>

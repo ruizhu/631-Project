@@ -1,8 +1,24 @@
 /* Import Open Sans font from google API*/
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
-.body{
+body{
   font-family: 'Open Sans', sans-serif;
+  background-color:#ebebeb;
+}
+a:focus,
+a:hover {
+    text-decoration: none;
+    transition: 300ms ease-in-out;
+}
+
+a:focus,
+.btn:focus,
+.btn:active:focus,
+button:focus,
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+    outline: none;
 }
 
 .list-group-item{
@@ -42,6 +58,47 @@
   background-color: #402B2B;
 }
 
+/* Post Ad Page Style */
+.upload_file{
+    margin: 35px 0;
+}
+.upload_file #myFile {
+    position: absolute;
+    opacity: 0;
+    left: 15px;
+    cursor: pointer;
+    height: 40px;
+    width: 188px;
+}
+
+.btn_upload{
+    background: linear-gradient(to right , #66b065 , #5bb95b);
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 3px;
+    transition: 0.5s ease-in-out;
+}
+
+.btn_cancel{
+    color: #28272c;
+    border: 2px solid #ccc;
+    background: #ffffff;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 2px;
+    transition: 0.5s ease-in-out;
+    border-radius: 0;
+}
+.save_1.btn_upload{
+    border-radius: 0;
+}
+.save_1.btn_upload:hover ,
+.save_1.btn_upload:focus ,
+.save_1.btn_upload.active{
+    background: linear-gradient(to right ,#5bb95b , #66b065);
+    color:  #fff ;
+}
 
 /*
 
