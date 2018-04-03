@@ -29,8 +29,8 @@ CREATE TABLE `user` (
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
 
-INSERT INTO user (email, password, major, identification)
-VALUES ('admin@tamu.edu', 'admin', 'mis', 'student');
+INSERT INTO `user` (`email`, `password`, `major`, `identification`, `phone`)
+VALUES ('admin@tamu.edu', 'admin', 'mis', 'student', '1111111111');
 
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;

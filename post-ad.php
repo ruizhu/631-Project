@@ -144,7 +144,7 @@
               <div class="col-12">
                 <div class="form-group">
                   <label for="title">Ad Description</label>
-                  <textarea  name="description" cols="5" rows="5" class="form-control"></textarea>
+                  <textarea id="description" name="description" cols="5" rows="5" class="form-control"></textarea>
                   <!-- <small id="title" class="form-text">A Description is required</small> -->
                 </div>
               </div>
