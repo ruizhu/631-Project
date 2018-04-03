@@ -39,7 +39,7 @@ DROP TABLE IF EXISTS `post`;
 
 CREATE TABLE `post` (
   `postid` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `postby` int(11) NOT NULL,
+  `userid` int(11) NOT NULL,
   `title` varchar(64) NOT NULL DEFAULT '',
   `price` varchar(64) NOT NULL DEFAULT '',
   `contact` char(30) NOT NULL DEFAULT '',
@@ -49,7 +49,23 @@ CREATE TABLE `post` (
   `image` varchar(64) DEFAULT '',
   `postdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`postid`),
-  FOREIGN KEY (`postby`) REFERENCES user(`userid`)
+  FOREIGN KEY (`userid`) REFERENCES user(`userid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+/*!40000 ALTER TABLE `post` ENABLE KEYS */;
+UNLOCK TABLES;
+
+# Dump of table post
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `bookmark`;
+
+CREATE TABLE `bookmark` (
+  `userid` int(11) unsigned NOT NULL,
+  `postid` int(11) unsigned NOT NULL,
+  PRIMARY KEY (`userid`, `postid`),
+  FOREIGN KEY (`userid`) REFERENCES user(`userid`),
+  FOREIGN KEY (`postid`) REFERENCES post(`postid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 /*!40000 ALTER TABLE `post` ENABLE KEYS */;
