@@ -24,10 +24,10 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-
-INSERT INTO `user` (`userid`, `email`, `password`, `major`, `identification`, `phone`)
-VALUES
-	(1,'admin@tamu.edu','admin','mis','student', `1111111111`);
+--
+-- INSERT INTO `user` (`email`, `password`, `major`, `identification`, `phone`)
+-- VALUES
+-- 	('admin@tamu.edu','admin','mis','student', `1111111111`);
 
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -39,7 +39,7 @@ DROP TABLE IF EXISTS `post`;
 
 CREATE TABLE `post` (
   `postid` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `userid` int(11) NOT NULL,
+  `userid` int(11) unsigned NOT NULL,
   `title` varchar(64) NOT NULL DEFAULT '',
   `price` varchar(64) NOT NULL DEFAULT '',
   `contact` char(30) NOT NULL DEFAULT '',
@@ -48,6 +48,7 @@ CREATE TABLE `post` (
   `description` varchar(64) DEFAULT '',
   `image` varchar(64) DEFAULT '',
   `postdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `deletedate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`postid`),
   FOREIGN KEY (`userid`) REFERENCES user(`userid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
