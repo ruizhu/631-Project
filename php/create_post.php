@@ -1,5 +1,6 @@
 <?php
-  // $userid = $_COOKIE['userid'] ?? '';
+  require_once('./initialize.php');
+    // $userid = $_COOKIE['userid'] ?? '';
   $userid = 1;
   $title = $_POST['title'] ?? '';
   $price = $_POST['price'] ?? '';
@@ -18,11 +19,14 @@
   echo $description . "<br />";
   echo $image . "<br />";
 
-  // function create_post($userid, $title, $price, $contact, $category, $purpose, $description, $image) {
-  //   global $db;
-  //   $sql = "INSERT INTO `post` (`userid`, `title`, `price`, `contact`, `category`, `purpose`, `description`, `image`)
-  //   VALUES	($userid, $title, $price, $contact, $category, $purpose, $description, $image);";
-  //   $result = mysqli_query($db, $sql);
-  //   return result;
-  // }
+  $result = create_post($userid, $title, $price, $contact, $category, $purpose, $description, $image);
+
+  if($result) {
+    echo "success";
+  } else {
+    echo "fail<br />";
+    echo mysqli_error($db);
+    db_disconnect($db);
+    exit;
+  }
 ?>

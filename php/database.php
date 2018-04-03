@@ -24,4 +24,24 @@
     $result = mysqli_query($db, $sql);
     return $result;
   }
+
+  function create_post($userid, $title, $price, $contact, $category, $purpose, $description, $image) {
+    global $db;
+    $sql = "INSERT INTO `post`";
+    $sql .= "(`userid`, `title`, `price`, `contact`, `category`, `purpose`, `description`, `image`)";
+    $sql .= "VALUES	(";
+    $sql .= "'" . $userid . "',";
+    $sql .= "'" . $title . "',";
+    $sql .= "'" . $price . "',";
+    $sql .= "'" . $contact . "',";
+    $sql .= "'" . $category . "',";
+    $sql .= "'" . $purpose . "',";
+    $sql .= "'" . $description . "',";
+    $sql .= "'" . $image . "'";
+    $sql .= ")";
+
+    $result = mysqli_query($db, $sql);
+    return $result;
+  }
+
  ?>
