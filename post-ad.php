@@ -1,8 +1,3 @@
-<?php
-  require_once('./php/initialize.php');
-  echo $__POST['title'];
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -88,7 +83,7 @@
                   <label for="title">Ad Title</label>
                   <div class="title_text">
                     <form name="form" action="" method="post">
-                      <input type="title" class="form-control" id="title" value="title" aria-describedby="title" placeholder="">
+                      <input type="title" class="form-control" id="title" aria-describedby="title" placeholder="">
                     </form>
                   </div>
                   <small id="title" class="form-text">A title is required</small>

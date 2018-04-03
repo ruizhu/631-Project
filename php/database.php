@@ -1,5 +1,8 @@
 <?php
-   require_once('db_credentials.php');
+  define("DB_SERVER", $value);
+  define("DB_USER", team27);
+  define("DB_PASS", team27);
+  define("DB_NAME", "");
 
    function db_connect() {
      $connection = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
