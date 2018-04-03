@@ -1,4 +1,5 @@
 <?php require_once('./php/initialize.php') ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,44 +74,43 @@
 
   <section class="post_ad">
         <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <h2>Post Ad</h2>
+          <form action="php/create_post.php" method="post">
+            <div class="row">
+              <div class="col-12">
+                <h2>Post Ad</h2>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-6 col-md-6">
+            <div class="row">
+              <div class="col-lg-6 col-md-6">
                 <div class="form-group">
                   <label for="title">Ad Title</label>
                   <div class="title_text">
-                    <form name="form" action="" method="post">
-                      <input type="title" class="form-control" id="title" aria-describedby="title" placeholder="">
-                    </form>
+                    <input type="title" class="form-control" id="title" name="title" aria-describedby="title" placeholder="">
                   </div>
                   <small id="title" class="form-text">A title is required</small>
                 </div>
-            </div>
-            <div class="col-lg-6 col-md-6">
+              </div>
+              <div class="col-lg-6 col-md-6">
                 <div class="form-group">
                   <label for="title">Price</label>
-                  <input type="Price" class="form-control" id="title" aria-describedby="title" placeholder="">
+                  <input type="Price" class="form-control" id="price" name="price" aria-describedby="title" placeholder="">
                   <small id="title" class="form-text">A Price is required</small>
                 </div>
+              </div>
             </div>
-          </div>
-          <div class="space10"></div>
-          <div class="row">
-            <div class="col-lg-6 col-md-6">
+            <div class="space10"></div>
+            <div class="row">
+              <div class="col-lg-6 col-md-6">
                 <div class="form-group">
                   <label for="contact">Contact</label>
-                  <input type="contact" class="form-control" id="contact" aria-describedby="contact" placeholder="">
+                  <input type="contact" class="form-control" id="contact" name="contact" aria-describedby="contact" placeholder="">
                   <small id="title" class="form-text">Contact information is required</small>
                 </div>
-            </div>
-            <div class="col-lg-6 col-md-6">
+              </div>
+              <div class="col-lg-6 col-md-6">
                 <div class="form-group">
                   <label for="category">Category</label>
-                  <select class="form-control">
+                  <select class="form-control" name="category">
                     <option disabled selected value style="display:none"> </option>
                     <option>Activity Partners</option>
                     <option>Collections</option>
@@ -124,54 +124,54 @@
                     <option>Vehicle</option>
                   </select>
                 </div>
+              </div>
             </div>
-          </div>
-          <div class="space10"></div>
-          <div class="row">
-            <div class="col-lg-6 col-md-6">
+            <div class="space10"></div>
+            <div class="row">
+              <div class="col-lg-6 col-md-6">
                 <div class="form-group">
                   <label for="purpose">Ad Purpose</label>
-                  <select class="form-control">
+                  <select class="form-control" name="purpose">
                     <option disabled selected value style="display:none"> </option>
                     <option>Looking</option>
                     <option>Selling</option>
                   </select>
                 </div>
+              </div>
             </div>
-          </div>
-          <div class="space10"></div>
-          <div class="row">
-            <div class="col-12">
+            <div class="space10"></div>
+            <div class="row">
+              <div class="col-12">
                 <div class="form-group">
                   <label for="title">Ad Description</label>
-                  <textarea cols="5" rows="5" class="form-control"></textarea>
+                  <textarea  name="description" cols="5" rows="5" class="form-control"></textarea>
                   <!-- <small id="title" class="form-text">A Description is required</small> -->
                 </div>
-            </div>
-          </div>
-          <div class="space10"></div>
-          <div class="row">
-            <div class="col-12">
-                <div class="form-group">
-                  <label for="title">Images</label>
-                 <input type="Images" class="form-control" id="title" aria-describedby="title" placeholder="">
-                </div>
-            </div>
-          </div>
-          <div class="space10"></div>
-          <div class="row">
-            <div class="col-12">
-              <h1>New Uploads</h1>
-              <hr>
-              <div class="upload_file">
-                <button type="button" class="btn btn_upload"> <input type="file" id="myFile"> Upload images... </input></button>
-
               </div>
-              <button type="button" class="btn btn_upload">Save</button>
-              <button type="button"  class="btn btn_cancel">Cancel</button>
-              <div class="space20"></div>
             </div>
-          </div>
+            <div class="space10"></div>
+            <div class="row">
+              <div class="col-12">
+                <div class="form-group">
+                  <label for="title">Images URL</label>
+                  <input type="Images" class="form-control" id="title" name="image" aria-describedby="title" placeholder="">
+                </div>
+              </div>
+            </div>
+            <div class="space10"></div>
+            <div class="row">
+              <div class="col-12">
+                <h1>New Uploads</h1>
+                <hr>
+                <div class="upload_file">
+                  <button type="button" class="btn btn_upload"> <input type="file" id="myFile"> Upload images... </input></button>
+                </div>
+                <button type="submit" class="btn btn_upload">Save</button>
+                <button type="button"  class="btn btn_cancel">Cancel</button>
+                <div class="space20"></div>
+              </div>
+            </div>
+          </form>
         </div>
       </section>
 

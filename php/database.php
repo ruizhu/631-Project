@@ -24,12 +24,4 @@
     $result = mysqli_query($db, $sql);
     return $result;
   }
-
-  function create_post($userid, $title, $price, $contact, $category, $purpose, $description, $image) {
-    global $db;
-    $sql = "INSERT INTO `post` (`userid`, `title`, `price`, `contact`, `category`, `purpose`, `description`, `image`)
-    VALUES	($userid, $title, $price, $contact, $category, $purpose, $description, $image);";
-    $result = mysqli_query($db, $sql);
-    return result;
-  }
  ?>
