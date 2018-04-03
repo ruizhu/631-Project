@@ -6,10 +6,14 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+SET FOREIGN_KEY_CHECKS = 0;
+DROP TABLE IF EXISTS `bookmark`;
+DROP TABLE IF EXISTS `post`;
+DROP TABLE IF EXISTS `user`;
+SET FOREIGN_KEY_CHECKS = 1;
+
 # Dump of table user
 # ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `user`;
 
 CREATE TABLE `user` (
   `userid` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -17,25 +21,22 @@ CREATE TABLE `user` (
   `password` varchar(64) NOT NULL DEFAULT '',
   `major` char(30) NOT NULL DEFAULT '',
   `identification` char(10) NOT NULL DEFAULT '',
-  `phone` char(10) NOT NULL DEFAULT '',
+  `phone` char(15) NOT NULL DEFAULT '',
   `userdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`userid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
---
--- INSERT INTO `user` (`email`, `password`, `major`, `identification`, `phone`)
--- VALUES
--- 	('admin@tamu.edu','admin','mis','student', `1111111111`);
+
+INSERT INTO user (email, password, major, identification)
+VALUES ('admin@tamu.edu', 'admin', 'mis', 'student');
 
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
 # Dump of table post
 # ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `post`;
 
 CREATE TABLE `post` (
   `postid` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -48,7 +49,7 @@ CREATE TABLE `post` (
   `description` varchar(64) DEFAULT '',
   `image` varchar(64) DEFAULT '',
   `postdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `deletedate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP UPDATE CURRENT_TIMESTAMP,
+  `deletedate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`postid`),
   FOREIGN KEY (`userid`) REFERENCES user(`userid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -58,8 +59,6 @@ UNLOCK TABLES;
 
 # Dump of table post
 # ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `bookmark`;
 
 CREATE TABLE `bookmark` (
   `userid` int(11) unsigned NOT NULL,
