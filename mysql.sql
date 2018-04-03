@@ -6,21 +6,31 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-
-# Dump of table comment
+# Dump of table user
 # ------------------------------------------------------------
 
-DROP TABLE IF EXISTS `comment`;
+DROP TABLE IF EXISTS `user`;
 
-CREATE TABLE `comment` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `userId` int(64) DEFAULT NULL,
-  `postId` int(11) DEFAULT NULL,
-  `content` text,
-  `createdAt` timestamp NULL DEFAULT NULL,
-  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
+CREATE TABLE `user` (
+  `userid` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `email` char(30) NOT NULL DEFAULT '',
+  `password` varchar(64) NOT NULL DEFAULT '',
+  `major` char(30) NOT NULL DEFAULT '',
+  `identification` char(10) NOT NULL DEFAULT '',
+  `phone` char(10) NOT NULL DEFAULT '',
+  `userdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`userid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+
+INSERT INTO `user` (`userid`, `email`, `password`, `major`, `identification`, `phone`)
+VALUES
+	(1,'admin@tamu.edu','admin','mis','student', `1111111111`);
+
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+UNLOCK TABLES;
 
 # Dump of table post
 # ------------------------------------------------------------
@@ -28,44 +38,22 @@ CREATE TABLE `comment` (
 DROP TABLE IF EXISTS `post`;
 
 CREATE TABLE `post` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `title` varchar(256) DEFAULT NULL,
-  `imgUrl` varchar(256) DEFAULT NULL,
-  `content` text,
-  `createdAt` timestamp NULL DEFAULT NULL,
-  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
+  `postid` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `postby` int(11) NOT NULL,
+  `title` varchar(64) NOT NULL DEFAULT '',
+  `price` varchar(64) NOT NULL DEFAULT '',
+  `contact` char(30) NOT NULL DEFAULT '',
+  `category` char(30) NOT NULL,
+  `purpose` char(30) NOT NULL,
+  `description` varchar(64) DEFAULT '',
+  `image` varchar(64) DEFAULT '',
+  `postdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`postid`),
+  FOREIGN KEY (`postby`) REFERENCES user(`userid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 /*!40000 ALTER TABLE `post` ENABLE KEYS */;
 UNLOCK TABLES;
-
-# Dump of table user
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `user`;
-
-CREATE TABLE `user` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `username` varchar(32) NOT NULL DEFAULT '',
-  `password` varchar(64) NOT NULL DEFAULT '',
-  `createdAt` timestamp NULL DEFAULT NULL,
-  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-LOCK TABLES `user` WRITE;
-/*!40000 ALTER TABLE `user` DISABLE KEYS */;
-
-INSERT INTO `user` (`id`, `username`, `password`, `createdAt`, `updatedAt`)
-VALUES
-	(1,'TooBug','123456','2017-04-07 10:47:04','2017-05-16 01:23:54'),
-	(2,'兔九妹','123456','2017-05-07 18:00:00','2017-05-07 09:20:29');
-
-/*!40000 ALTER TABLE `user` ENABLE KEYS */;
-UNLOCK TABLES;
-
-
 
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
