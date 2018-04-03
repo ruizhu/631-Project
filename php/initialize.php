@@ -1,6 +1,5 @@
 <?php
-  //
-  // require_once('database.php');
-  // $db = db_connect();
-
+  ini_set('display_errors', 1);
+  require_once('database.php');
+  $db = db_connect();
 ?>
