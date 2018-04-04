@@ -27,8 +27,8 @@
 
   function create_post($userid, $title, $price, $contact, $category, $purpose, $description, $image) {
     global $db;
-    $sql = "INSERT INTO `post`";
-    $sql .= "(`userid`, `title`, `price`, `contact`, `category`, `purpose`, `description`, `image`)";
+    $sql = "INSERT INTO 'post'";
+    $sql .= "('userid', 'title', 'price', 'contact', 'category', 'purpose', 'description', 'image')";
     $sql .= "VALUES	(";
     $sql .= "'" . $userid . "',";
     $sql .= "'" . $title . "',";

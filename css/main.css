@@ -47,6 +47,11 @@ a:focus,a:hover {
   background-color: #402B2B;
 }
 
+/* index page Style*/
+#post_list, #post_list a{
+  color: #500000;
+  text-decoration: none;
+}
 
 
 
