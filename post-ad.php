@@ -27,9 +27,9 @@
           <div class="row mb-md-5">
             <div class="row justify-content-end col-12">
               <div class="align-self-end ">
-                <a href="login&register.php"><span class="nav-font text-white">login</span></a>
+                <a href="signin.php"><span class="nav-font text-white">login</span></a>
                 &nbsp &nbsp
-                <a href="login&register.php"><span class="nav-font text-white">register</span></a>
+                <a href="signin.php"><span class="nav-font text-white">register</span></a>
               </div>
             </div>
 
