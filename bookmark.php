@@ -17,7 +17,7 @@
     <div class="mx-auto container">
       <div class="row">
         <div class="col-md-4 col-12">
-          <a href="index.html">
+          <a href="index.php">
             <img src="images/logo.png" class="img-fluid header-img">
           </a>
         </div>
@@ -25,9 +25,9 @@
           <div class="row mb-md-5">
             <div class="row justify-content-end col-12">
               <div class="align-self-end ">
-                <a href="login&register.html"><span class="nav-font text-white">login</span></a>
+                <a href="login&register.php"><span class="nav-font text-white">login</span></a>
                 &nbsp &nbsp
-                <a href="login&register.html"><span class="nav-font text-white">register</span></a>
+                <a href="login&register.php"><span class="nav-font text-white">register</span></a>
               </div>
             </div>
 
@@ -35,13 +35,13 @@
           <div class="row align-self-end">
             <nav class="nav col-md-7 col-12">
               <div class="col-4 align-self-end nav-link rounded bg-darkmaroon">
-                <a class="text-white" href="account.html">
+                <a class="text-white" href="account.php">
                   <img src="images/account.png" class="img-fluid">
                   <span class="nav-font">Account</span>
                 </a>
               </div>
               <div class="col-4 align-self-end nav-link rounded bg-darkmaroon">
-                <a class="text-white" href="bookmark.html">
+                <a class="text-white" href="bookmark.php">
                   <img src="images/bookmark.png" class="img-fluid">
                   <span class="nav-font">Bookmark</span>
                 </a>
