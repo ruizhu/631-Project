@@ -49,7 +49,7 @@
                 </a>
               </div>
               <div class="col-4 align-self-end nav-link rounded bg-darkmaroon">
-                <a class="text-white" href="post-ad.html">
+                <a class="text-white" href="post-ad.php">
                   <img src="images/post-ad.png" class="img-fluid">
                   <span class="nav-font">Post Ad</span>
                 </a>
@@ -161,7 +161,7 @@
             <div class="space10"></div>
             <div class="row">
               <div class="col-12">
-                <h1>New Uploads</h1>
+                <h2>New Uploads</h2>
                 <hr>
                 <div class="upload_file">
                   <button type="button" class="btn btn_upload"> <input type="file" id="myFile"> Upload images... </input></button>

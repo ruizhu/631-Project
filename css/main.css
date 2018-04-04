@@ -1,12 +1,12 @@
 /* Import Open Sans font from google API*/
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
+/* Universal Style for all pages*/
 body{
   font-family: 'Open Sans', sans-serif;
   background-color:#ebebeb;
 }
-a:focus,
-a:hover {
+a:focus,a:hover {
     text-decoration: none;
     transition: 300ms ease-in-out;
 }
@@ -17,11 +17,6 @@ a:hover {
 
 .list-group-item{
   font-size: 0.9rem;
-}
-
-#post_list, #post_list a{
-  text-decoration: none;
-  color:#500000;
 }
 
 .icon {
@@ -51,6 +46,9 @@ a:hover {
 .bg-gray:active {
   background-color: #402B2B;
 }
+
+
+
 
 /* Post Ad Page Style */
 .post_ad label{
