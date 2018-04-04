@@ -17,7 +17,7 @@
     <div class="mx-auto container">
       <div class="row">
         <div class="col-md-4 col-12">
-          <a href="index.html">
+          <a href="index.php">
             <img src="images/logo.png" class="img-fluid header-img">
           </a>
         </div>
@@ -25,9 +25,9 @@
           <div class="row mb-md-5">
             <div class="row justify-content-end col-12">
               <div class="align-self-end ">
-                <a href="login&register.html"><span class="nav-font text-white">login</span></a>
+                <a href="signin.php"><span class="nav-font text-white">login</span></a>
                 &nbsp &nbsp
-                <a href="login&register.html"><span class="nav-font text-white">register</span></a>
+                <a href="signin.php"><span class="nav-font text-white">register</span></a>
               </div>
             </div>
 
@@ -35,13 +35,13 @@
           <div class="row align-self-end">
             <nav class="nav col-md-7 col-12">
               <div class="col-4 align-self-end nav-link rounded bg-darkmaroon">
-                <a class="text-white" href="account.html">
+                <a class="text-white" href="account.php">
                   <img src="images/account.png" class="img-fluid">
                   <span class="nav-font">Account</span>
                 </a>
               </div>
               <div class="col-4 align-self-end nav-link rounded bg-darkmaroon">
-                <a class="text-white" href="bookmark.html">
+                <a class="text-white" href="bookmark.php">
                   <img src="images/bookmark.png" class="img-fluid">
                   <span class="nav-font">Bookmark</span>
                 </a>
@@ -70,36 +70,24 @@
     </div>
   </header>
 
-<section class="container">
-  <div class="pl-0 pr-0 table-responsive col-sm-12 rounded" id="post_list"><!-- Main List Section-->
-    <table class="col-12 table table-striped table-hover rounded-bottom">
-      <tr>
-        <td class="list_column_icon"></td>
-        <td class="list_column_date">Mar 3</td>
-        <td class="list_column_icon"><image src="images/heart.png" class="icon" id="icon_saved"></image></td>
-        <td class="list_column_title"><a href="">ISTM 631 Mobile First Book</a></td>
-        <td class="list_column_icon"><image src="images/offering.png" class="icon" id="icon_saved"></image></td>
-        <td class="list_column_price">$12 or best offer</td>
-      </tr>
-      <tr>
-        <td class="list_column_icon"><image src="images/picture.png" class="icon" id="icon_picture"></image></td>
-        <td class="list_column_date">Mar 3</td>
-        <td class="list_column_icon"><image src="images/heart.png" class="icon" id="icon_saved"></image></td>
-        <td class="list_column_title"><a href="">!!!!! Sublease 2250 Dartmouth 2b2b !!!!!</a></td>
-        <td class="list_column_icon"><image src="images/offering.png" class="icon" id="icon_saved"></td>
-        <td class="list_column_price"> 550 obo</td>
-      </tr>
-      <tr>
-        <td class="list_column_icon"><image src="images/picture.png" class="icon" id="icon_picture"></image></td>
-        <td class="list_column_date">Mar 2</td>
-        <td class="list_column_icon"><image src="images/heart.png" class="icon" id="icon_saved"></image></td>
-        <td class="list_column_title"><a href="">Need ride to Houston during spring break </a></td>
-        <td class="list_column_icon"><img src="images/looking.png" class="icon" id="icon_saved"></td>
-        <td class="list_column_price"> share gas </td>
-      </tr>
-    </table>
-  </div><!-- close post_list  Section-->
+<section class="containter">
 
+  <div class="container">
+    <div class="row">
+      <div class="col-12  col-lg-5">
+        <h2>My Account</h2><br>
+        <button type="button" class="btn btn-outline-dark" name="button">Change Password</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <hr>
+        <h2>My Posts</h2><br>
+        <p>You do not have any posted yet.</p>
+        <hr>
+      </div>
+    </div>
+  </div>
 </section>
 
 </body>
