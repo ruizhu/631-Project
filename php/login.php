@@ -8,8 +8,8 @@
   $result = login($email, $password);
 
   if($result) {
-    session_start();
     $_SESSION["email"] = $email;
+    
     header('Location: ../index.php');
   } else {
     echo "fail<br />";
