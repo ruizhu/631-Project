@@ -10,45 +10,44 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS 'bookmark';
 DROP TABLE IF EXISTS 'post';
 DROP TABLE IF EXISTS 'user';
+DROP TABLE IF EXISTS 'category';
 SET FOREIGN_KEY_CHECKS = 1;
 
 # Dump of table user
 # ------------------------------------------------------------
 
 CREATE TABLE 'user' (
-  'userid' int(11) unsigned NOT NULL AUTO_INCREMENT,
-  'email' char(30) NOT NULL DEFAULT '',
+  'user_id' int(11) unsigned AUTO_INCREMENT,
+  'email' varchar(64) NOT NULL DEFAULT '',
   'password' varchar(64) NOT NULL DEFAULT '',
-  'major' char(30) NOT NULL DEFAULT '',
-  'identification' char(10) NOT NULL DEFAULT '',
-  'phone' char(15) NOT NULL DEFAULT '',
-  'userdate' timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  'user_date' timestamp CURRENT_TIMESTAMP,
   PRIMARY KEY ('userid')
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-INSERT INTO `user` (`email`, `password`, `major`, `identification`, `phone`)
-VALUES ('admin@tamu.edu', 'admin', 'mis', 'student', '1111111111');
+INSERT INTO 'user' ('email', 'password')
+VALUES ('admin@tamu.edu', 'admin');
 
 # Dump of table post
 # ------------------------------------------------------------
 
 CREATE TABLE 'post' (
-  'postid' int(11) unsigned NOT NULL AUTO_INCREMENT,
-  'userid' int(11) unsigned NOT NULL,
+  'post_id' int(11) unsigned AUTO_INCREMENT,
+  'user_id' int(11) NOT NULL,
   'title' varchar(64) NOT NULL DEFAULT '',
   'price' varchar(64) NOT NULL DEFAULT '',
-  'contact' char(30) NOT NULL DEFAULT '',
-  'category' char(30) NOT NULL,
-  'purpose' char(30) NOT NULL,
-  'description' varchar(64) DEFAULT '',
-  'image' varchar(64) DEFAULT '',
-  'postdate' timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  'deletedate' timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY ('postid'),
-  FOREIGN KEY ('userid') REFERENCES user('userid')
+  'contact' varchar(64) NOT NULL DEFAULT '',
+  'category_id' int(2) NOT DEFAULT,
+  'purpose' varchar(10) NOT DEFAULT,
+  'description' text,
+  'image' text,
+  'post_date' timestamp NOW(),
+  'delete_date' timestamp NOW() + INTERVAL 30 DAY,
+  PRIMARY KEY ('post_id'),
+  FOREIGN KEY ('user_id') REFERENCES user('user_id'),
+  FOREIGN KEY ('category_id') REFERENCES category('category_id')
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-# Dump of table post
+# Dump of table bookmark
 # ------------------------------------------------------------
 
 CREATE TABLE 'bookmark' (
@@ -58,6 +57,18 @@ CREATE TABLE 'bookmark' (
   FOREIGN KEY ('userid') REFERENCES user('userid'),
   FOREIGN KEY ('postid') REFERENCES post('postid')
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+# Dump of table category
+# ------------------------------------------------------------
+
+CREATE TABLE 'category' (
+  'category_id' int(2) unsigned NOT NULL AUTO_INCREMENT,
+  'category_desc' varchar(64) NOT NULL,
+  PRIMARY KEY ('category_id')
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+/* INSERT INTO 'category' ('category_desc') */
+
 
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
