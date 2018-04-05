@@ -22,8 +22,8 @@ function get_id_by_email($email) {
   global $db;
   $sql = "SELECT userid FROM user ";
   $sql .= "WHERE email = '" . $email . "'";
-  $result = mysqli_fetch_row(mysqli_query($db, $sql));
-  return $result[0];
+  $result = mysqli_fetch_assoc(mysqli_query($db, $sql));
+  return $result["userid"];
 }
 
   function get_latest_20() {
@@ -57,6 +57,20 @@ function get_id_by_email($email) {
     $sql = "SELECT * FROM user ";
     $sql .= "WHERE email = '" . $email . "'";
     $sql .= "AND password = '" . $password . "'";
+
+    $result = mysqli_query($db, $sql);
+    return $result;
+  }
+
+  function get_bookmark() {
+
+  }
+
+  function get_account_post($userid) {
+    global $db;
+
+    $sql = "SELECT * FROM post ";
+    $sql .= "WHERE userid = '" . $userid . "'";
 
     $result = mysqli_query($db, $sql);
     return $result;
