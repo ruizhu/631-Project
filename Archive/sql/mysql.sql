@@ -7,58 +7,82 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 SET FOREIGN_KEY_CHECKS = 0;
-DROP TABLE IF EXISTS `bookmark`;
-DROP TABLE IF EXISTS `post`;
-DROP TABLE IF EXISTS `user`;
+DROP TABLE IF EXISTS 'bookmark';
+DROP TABLE IF EXISTS 'post';
+DROP TABLE IF EXISTS 'user';
 SET FOREIGN_KEY_CHECKS = 1;
 
 # Dump of table user
 # ------------------------------------------------------------
 
-CREATE TABLE `user` (
-  `userid` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `email` char(30) NOT NULL DEFAULT '',
-  `password` varchar(64) NOT NULL DEFAULT '',
-  `major` char(30) NOT NULL DEFAULT '',
-  `identification` char(10) NOT NULL DEFAULT '',
-  `phone` char(15) NOT NULL DEFAULT '',
-  `userdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`userid`)
+CREATE TABLE 'user' (
+  'userid' int(11) unsigned NOT NULL AUTO_INCREMENT,
+  'email' char(30) NOT NULL DEFAULT '',
+  'password' varchar(64) NOT NULL DEFAULT '',
+  'major' char(30) NOT NULL DEFAULT '',
+  'identification' char(10) NOT NULL DEFAULT '',
+  'phone' char(15) NOT NULL DEFAULT '',
+  'userdate' timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY ('userid')
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+<<<<<<< HEAD
 INSERT INTO `user` (`email`, `password`, `major`, `identification`, `phone`)
 VALUES ('admin@tamu.edu', 'admin', 'mis', 'student', '1111111111');
 
+=======
+LOCK TABLES 'user' WRITE;
+/*!40000 ALTER TABLE 'user' DISABLE KEYS */;
+
+INSERT INTO 'user' ('email', 'password', 'major', 'identification', 'phone')
+VALUES ('admin@tamu.edu', 'admin', 'mis', 'student', '1111111111');
+
+/*!40000 ALTER TABLE 'user' ENABLE KEYS */;
+UNLOCK TABLES;
+
+>>>>>>> 4c772aa688fabc9b75c51f81b65fafe909acb736
 # Dump of table post
 # ------------------------------------------------------------
 
-CREATE TABLE `post` (
-  `postid` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `userid` int(11) unsigned NOT NULL,
-  `title` varchar(64) NOT NULL DEFAULT '',
-  `price` varchar(64) NOT NULL DEFAULT '',
-  `contact` char(30) NOT NULL DEFAULT '',
-  `category` char(30) NOT NULL,
-  `purpose` char(30) NOT NULL,
-  `description` varchar(64) DEFAULT '',
-  `image` varchar(64) DEFAULT '',
-  `postdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `deletedate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`postid`),
-  FOREIGN KEY (`userid`) REFERENCES user(`userid`)
+CREATE TABLE 'post' (
+  'postid' int(11) unsigned NOT NULL AUTO_INCREMENT,
+  'userid' int(11) unsigned NOT NULL,
+  'title' varchar(64) NOT NULL DEFAULT '',
+  'price' varchar(64) NOT NULL DEFAULT '',
+  'contact' char(30) NOT NULL DEFAULT '',
+  'category' char(30) NOT NULL,
+  'purpose' char(30) NOT NULL,
+  'description' varchar(64) DEFAULT '',
+  'image' varchar(64) DEFAULT '',
+  'postdate' timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  'deletedate' timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY ('postid'),
+  FOREIGN KEY ('userid') REFERENCES user('userid')
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+<<<<<<< HEAD
+=======
+/*!40000 ALTER TABLE 'post' ENABLE KEYS */;
+UNLOCK TABLES;
+
+>>>>>>> 4c772aa688fabc9b75c51f81b65fafe909acb736
 # Dump of table post
 # ------------------------------------------------------------
 
-CREATE TABLE `bookmark` (
-  `userid` int(11) unsigned NOT NULL,
-  `postid` int(11) unsigned NOT NULL,
-  PRIMARY KEY (`userid`, `postid`),
-  FOREIGN KEY (`userid`) REFERENCES user(`userid`),
-  FOREIGN KEY (`postid`) REFERENCES post(`postid`)
+CREATE TABLE 'bookmark' (
+  'userid' int(11) unsigned NOT NULL,
+  'postid' int(11) unsigned NOT NULL,
+  PRIMARY KEY ('userid', 'postid'),
+  FOREIGN KEY ('userid') REFERENCES user('userid'),
+  FOREIGN KEY ('postid') REFERENCES post('postid')
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+<<<<<<< HEAD
+=======
+/*!40000 ALTER TABLE 'post' ENABLE KEYS */;
+UNLOCK TABLES;
+
+>>>>>>> 4c772aa688fabc9b75c51f81b65fafe909acb736
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
