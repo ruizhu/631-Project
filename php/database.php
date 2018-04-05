@@ -8,7 +8,7 @@
   define("DB_NAME", "istm631");
 
   function db_connect() {
-    $connection = mysqli_connect(DB_SERVER,  DB_USER, DB_PASS, DB_NAME);
+    $connection = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
     return $connection;
   }
 
