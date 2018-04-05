@@ -26,21 +26,9 @@ CREATE TABLE 'user' (
   PRIMARY KEY ('userid')
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-<<<<<<< HEAD
 INSERT INTO `user` (`email`, `password`, `major`, `identification`, `phone`)
 VALUES ('admin@tamu.edu', 'admin', 'mis', 'student', '1111111111');
 
-=======
-LOCK TABLES 'user' WRITE;
-/*!40000 ALTER TABLE 'user' DISABLE KEYS */;
-
-INSERT INTO 'user' ('email', 'password', 'major', 'identification', 'phone')
-VALUES ('admin@tamu.edu', 'admin', 'mis', 'student', '1111111111');
-
-/*!40000 ALTER TABLE 'user' ENABLE KEYS */;
-UNLOCK TABLES;
-
->>>>>>> 4c772aa688fabc9b75c51f81b65fafe909acb736
 # Dump of table post
 # ------------------------------------------------------------
 
@@ -60,12 +48,6 @@ CREATE TABLE 'post' (
   FOREIGN KEY ('userid') REFERENCES user('userid')
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-<<<<<<< HEAD
-=======
-/*!40000 ALTER TABLE 'post' ENABLE KEYS */;
-UNLOCK TABLES;
-
->>>>>>> 4c772aa688fabc9b75c51f81b65fafe909acb736
 # Dump of table post
 # ------------------------------------------------------------
 
@@ -77,12 +59,6 @@ CREATE TABLE 'bookmark' (
   FOREIGN KEY ('postid') REFERENCES post('postid')
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-<<<<<<< HEAD
-=======
-/*!40000 ALTER TABLE 'post' ENABLE KEYS */;
-UNLOCK TABLES;
-
->>>>>>> 4c772aa688fabc9b75c51f81b65fafe909acb736
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

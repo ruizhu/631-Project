@@ -27,13 +27,8 @@
 
   function create_post($userid, $title, $price, $contact, $category, $purpose, $description, $image) {
     global $db;
-<<<<<<< HEAD
     $sql = "INSERT INTO post";
     $sql .= "(userid, title, price, contact, category, purpose, description, image)";
-=======
-    $sql = "INSERT INTO 'post'";
-    $sql .= "('userid', 'title', 'price', 'contact', 'category', 'purpose', 'description', 'image')";
->>>>>>> 4c772aa688fabc9b75c51f81b65fafe909acb736
     $sql .= "VALUES	(";
     $sql .= "'" . $userid . "',";
     $sql .= "'" . $title . "',";
@@ -49,6 +44,15 @@
     return $result;
   }
 
-  
+  function login($email, $password) {
+    global $db;
+    $sql = "SELECT * FROM user ";
+    $sql .= "WHERE email = '" . $email . "'";
+    $sql .= "AND password = '" . $password . "'";
+
+    $result = mysqli_query($db, $sql);
+    return $result;
+  }
+
 
  ?>
