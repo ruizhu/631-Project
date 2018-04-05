@@ -10,19 +10,19 @@
   $description = $_POST['description'] ?? '';
   $image = $_POST['image'] ?? '';
 
-  echo $userid . "<br />";
-  echo $title . "<br />";
-  echo $price . "<br />";
-  echo $contact . "<br />";
-  echo $category . "<br />";
-  echo $purpose . "<br />";
-  echo $description . "<br />";
-  echo $image . "<br />";
+  // echo $userid . "<br />";
+  // echo $title . "<br />";
+  // echo $price . "<br />";
+  // echo $contact . "<br />";
+  // echo $category . "<br />";
+  // echo $purpose . "<br />";
+  // echo $description . "<br />";
+  // echo $image . "<br />";
 
   $result = create_post($userid, $title, $price, $contact, $category, $purpose, $description, $image);
 
   if($result) {
-    echo "success";
+    header('Location: ../index.php');
   } else {
     echo "fail<br />";
     echo mysqli_error($db);

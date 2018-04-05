@@ -26,14 +26,8 @@ CREATE TABLE 'user' (
   PRIMARY KEY ('userid')
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-LOCK TABLES 'user' WRITE;
-/*!40000 ALTER TABLE 'user' DISABLE KEYS */;
-
-INSERT INTO 'user' ('email', 'password', 'major', 'identification', 'phone')
+INSERT INTO `user` (`email`, `password`, `major`, `identification`, `phone`)
 VALUES ('admin@tamu.edu', 'admin', 'mis', 'student', '1111111111');
-
-/*!40000 ALTER TABLE 'user' ENABLE KEYS */;
-UNLOCK TABLES;
 
 # Dump of table post
 # ------------------------------------------------------------
@@ -54,9 +48,6 @@ CREATE TABLE 'post' (
   FOREIGN KEY ('userid') REFERENCES user('userid')
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-/*!40000 ALTER TABLE 'post' ENABLE KEYS */;
-UNLOCK TABLES;
-
 # Dump of table post
 # ------------------------------------------------------------
 
@@ -67,9 +58,6 @@ CREATE TABLE 'bookmark' (
   FOREIGN KEY ('userid') REFERENCES user('userid'),
   FOREIGN KEY ('postid') REFERENCES post('postid')
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-/*!40000 ALTER TABLE 'post' ENABLE KEYS */;
-UNLOCK TABLES;
 
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;

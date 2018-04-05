@@ -1,3 +1,9 @@
+<?php require_once('./php/initialize.php');
+
+    check_signin();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
