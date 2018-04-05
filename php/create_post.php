@@ -1,7 +1,7 @@
 <?php
   require_once('./initialize.php');
     // $userid = $_COOKIE['userid'] ?? '';
-  $userid = 1;
+  $userid = $_SESSION['userid'];
   $title = $_POST['title'] ?? '';
   $price = $_POST['price'] ?? '';
   $contact = $_POST['contact'] ?? '';

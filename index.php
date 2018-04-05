@@ -41,7 +41,7 @@
             <div class="col-4 align-self-end nav-link rounded bg-darkmaroon">
               <a class="text-white" href="account.php">
                 <img src="images/account.png" class="img-fluid">
-                <span class="nav-font">Account</span>
+                <span class="nav-font">Account<?php echo $_SESSION["userid"]; ?></span>
               </a>
             </div>
             <div class="col-4 align-self-end nav-link rounded bg-darkmaroon">
