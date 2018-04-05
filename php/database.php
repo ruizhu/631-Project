@@ -1,11 +1,11 @@
 <?php
-  define("DB_SERVER", "localhost");
-  // define("DB_USER", "id5250817_team27");
-  // define("DB_PASS", "team27admin");
-  // define("DB_NAME", "id5250817_aggieclassified");
-  define("DB_USER", "root");
-  define("DB_PASS", "thp33111");
-  define("DB_NAME", "istm631");
+  define("DB_SERVER", "107.180.51.238");
+  define("DB_USER", "team27");
+  define("DB_PASS", "team27admin");
+  define("DB_NAME", "aggieclassified");
+  //define("DB_USER", "root");
+  //define("DB_PASS", "thp33111");
+  //define("DB_NAME", "istm631");
 
   function db_connect() {
     $connection = mysqli_connect(DB_SERVER,  DB_USER, DB_PASS, DB_NAME);
