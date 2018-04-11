@@ -28,7 +28,7 @@ function get_id_by_email($email) {
 
   function get_latest_20() {
     global $db;
-    $sql = "SELECT * FROM post ORDER BY postid DESC LIMIT 20";
+    $sql = "SELECT * FROM post ORDER BY post_id DESC LIMIT 20";
     $result = mysqli_query($db, $sql);
     return $result;
   }
@@ -36,7 +36,7 @@ function get_id_by_email($email) {
   function create_post($userid, $title, $price, $contact, $category, $purpose, $description, $image) {
     global $db;
     $sql = "INSERT INTO post";
-    $sql .= "(userid, title, price, contact, category, purpose, description, image)";
+    $sql .= "(user_id, title, price, contact, category_id, purpose, description, image)";
     $sql .= "VALUES	(";
     $sql .= "'" . $userid . "',";
     $sql .= "'" . $title . "',";

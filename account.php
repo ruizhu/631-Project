@@ -42,7 +42,13 @@
             echo "<table class=\"col-12 table table-striped table-hover rounded-bottom\">";
             while($post = mysqli_fetch_assoc($posts)) {
               echo "<tr class=\"\">";
-                echo "<td class=\"list_column_icon\"></td>";
+                echo "<td class=\"list_column_icon\">";
+
+                if($post["image"] != ''){
+                  echo "<image src=\"images/picture.png\" class=\"icon\" id=\"icon_picture\">";
+                }
+
+                echo "</td>";
                 echo "<td class=\"list_column_date\">";
                 echo $post["postdate"];
                 echo "</td>";
