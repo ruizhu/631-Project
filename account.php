@@ -1,7 +1,7 @@
 <?php require_once('./php/initialize.php');
     check_signin();
-    $userid = $_SESSION["userid"];
-    $posts = get_account_post($userid);
+    $user_id = $_SESSION["user_id"];
+    $posts = get_account_post($user_id);
     // $posts = mysqli_fetch_assoc($posts);
 ?>
 
@@ -50,7 +50,7 @@
 
                 echo "</td>";
                 echo "<td class=\"list_column_date\">";
-                echo $post["postdate"];
+                echo $post["post_date"];
                 echo "</td>";
                 echo "<td class=\"list_column_icon\"><image src=\"images/heart.png\" class=\"icon\" id=\"icon_saved\"></image></td>";
                 echo "<td class=\"list_column_title\"><a href=\"\">";

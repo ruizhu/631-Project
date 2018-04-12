@@ -1,7 +1,7 @@
 <?php
   require_once('./initialize.php');
 
-  // $userid = $_COOKIE['userid'] ?? '';
+  // $user_id = $_COOKIE['user_id'] ?? '';
   $email = $_POST['email'] ?? '';
   $password = $_POST['password'] ?? '';
 
@@ -9,7 +9,7 @@
 
   if($result) {
     $_SESSION["email"] = $email;
-    $_SESSION["userid"] = get_id_by_email($email);
+    $_SESSION["user_id"] = get_id_by_email($email);
     header('Location: ../index.php');
   } else {
     echo "fail<br />";

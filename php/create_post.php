@@ -1,7 +1,7 @@
 <?php
   require_once('./initialize.php');
-    // $userid = $_COOKIE['userid'] ?? '';
-  $userid = $_SESSION['userid'];
+    // $user_id = $_COOKIE['user_id'] ?? '';
+  $user_id = $_SESSION['user_id'];
   $title = $_POST['title'] ?? '';
   $price = $_POST['price'] ?? '';
   $contact = $_POST['contact'] ?? '';
@@ -10,7 +10,7 @@
   $description = $_POST['description'] ?? '';
   $image = $_POST['image'] ?? '';
 
-  $result = create_post($userid, $title, $price, $contact, $category, $purpose, $description, $image);
+  $result = create_post($user_id, $title, $price, $contact, $category, $purpose, $description, $image);
 
   if($result) {
     header('Location: ../index.php');

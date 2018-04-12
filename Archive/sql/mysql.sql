@@ -26,15 +26,6 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`email`, `password`)
 VALUES ('admin@tamu.edu', 'admin');
 
-# Dump of table category
-# ------------------------------------------------------------
-
-CREATE TABLE `category` (
-  `category_id` int(2) unsigned NOT NULL AUTO_INCREMENT,
-  `category_desc` varchar(64) NOT NULL,
-  PRIMARY KEY (`category_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
 # Dump of table post
 # ------------------------------------------------------------
 
@@ -44,14 +35,13 @@ CREATE TABLE `post` (
   `title` varchar(64) NOT NULL DEFAULT '',
   `price` varchar(64) NOT NULL DEFAULT '',
   `contact` varchar(64) NOT NULL DEFAULT '',
-  `category_id` int(2) unsigned NOT NULL,
+  `category` varchar(20) NOT NULL DEFAULT '',
   `purpose` varchar(10) NOT NULL DEFAULT '',
   `description` text,
   `image` text,
   `post_date` timestamp DEFAULT NOW(),
   PRIMARY KEY (`post_id`),
-  FOREIGN KEY (`user_id`) REFERENCES user(`user_id`),
-  FOREIGN KEY (`category_id`) REFERENCES category(`category_id`)
+  FOREIGN KEY (`user_id`) REFERENCES user(`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 # Dump of table bookmark

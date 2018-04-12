@@ -1,11 +1,8 @@
 <?php
   define("DB_SERVER", "localhost");
-  // define("DB_USER", "team27");
-  // define("DB_PASS", "team27admin");
-  // define("DB_NAME", "aggieclassified");
-  define("DB_USER", "root");
-  define("DB_PASS", "thp33111");
-  define("DB_NAME", "istm631");
+  define("DB_USER", "team27");
+  define("DB_PASS", "team27admin");
+  define("DB_NAME", "aggieclassified");
 
   function db_connect() {
     $connection = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
@@ -20,10 +17,10 @@
 
 function get_id_by_email($email) {
   global $db;
-  $sql = "SELECT userid FROM user ";
+  $sql = "SELECT user_id FROM user ";
   $sql .= "WHERE email = '" . $email . "'";
   $result = mysqli_fetch_assoc(mysqli_query($db, $sql));
-  return $result["userid"];
+  return $result["user_id"];
 }
 
   function get_latest_20() {
@@ -33,12 +30,12 @@ function get_id_by_email($email) {
     return $result;
   }
 
-  function create_post($userid, $title, $price, $contact, $category, $purpose, $description, $image) {
+  function create_post($user_id, $title, $price, $contact, $category, $purpose, $description, $image) {
     global $db;
     $sql = "INSERT INTO post";
-    $sql .= "(user_id, title, price, contact, category_id, purpose, description, image)";
+    $sql .= "(user_id, title, price, contact, category, purpose, description, image)";
     $sql .= "VALUES	(";
-    $sql .= "'" . $userid . "',";
+    $sql .= "'" . $user_id . "',";
     $sql .= "'" . $title . "',";
     $sql .= "'" . $price . "',";
     $sql .= "'" . $contact . "',";
@@ -66,11 +63,11 @@ function get_id_by_email($email) {
 
   }
 
-  function get_account_post($userid) {
+  function get_account_post($user_id) {
     global $db;
 
     $sql = "SELECT * FROM post ";
-    $sql .= "WHERE userid = '" . $userid . "'";
+    $sql .= "WHERE user_id = '" . $user_id . "'";
 
     $result = mysqli_query($db, $sql);
     return $result;
