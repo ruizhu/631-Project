@@ -13,7 +13,7 @@
             <div class="align-self-end ">
               <a href="signin.php"><span class="align-self-end nav-font text-white">login</span></a>
               &nbsp &nbsp
-              <a href="signin.php"><span class="align-self-end nav-font text-white">register</span></a>
+              <a href="register.php"><span class="align-self-end nav-font text-white">register</span></a>
             </div>
           </div>
 

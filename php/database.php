@@ -60,7 +60,16 @@ function get_id_by_email($email) {
   }
 
   function get_bookmark() {
+    global $db;
+    $sql = ""
 
+    $result = mysql_query($db, $sql);
+    return $result;
+  }
+
+  function register($email, $password) {
+
+    return $result;
   }
 
   function get_account_post($user_id) {
