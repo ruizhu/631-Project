@@ -1,5 +1,7 @@
 <?php require_once('./php/initialize.php');
     check_signin();
+    // $user_id = $_SESSION["user_id"];
+    $posts = get_latest_20();
 ?>
 
 <!DOCTYPE html>
@@ -36,40 +38,37 @@
     </div><!-- close category_list Section-->
 
     <div class="pl-md-0 pr-md-0 table-responsive col-md-9 rounded" id="post_list"><!-- Main List Section-->
-      <table class="col-12 table table-striped table-hover rounded-bottom">
-      <!--Table structure:
-      1st column: have photo or not, item with photo show a camera icon, blank if no photo;
-      2nd column: Post date of the classified Ad, post are always order by date, item post latest will display at top;
-      3rd column: saved or not, saved item show a bookmark sign, blank if not saved;
-      4th column: Title, title of the post, also act as a link, user can click in for more information
-      5th column: Price, price of the item, data store in text format, gives user more flecibility in express price.
-      -->
-      <!-- Data below should read each sql obs as one table row into the table  -->
-        <tr class="">
-          <td class="list_column_icon"></td>
-          <td class="list_column_date">Mar 3</td>
-          <td class="list_column_icon"><image src="images/heart.png" class="icon" id="icon_saved"></image></td>
-          <td class="list_column_title"><a href="">ISTM 631 Mobile First Book</a></td>
-          <td class="list_column_icon"><image src="images/offering.png" class="icon" id="icon_saved"></image></td>
-          <td class="list_column_price">$12 or best offer</td>
-        </tr>
-        <tr>
-          <td class="list_column_icon"><image src="images/picture.png" class="icon" id="icon_picture"></image></td>
-          <td class="list_column_date">Mar 3</td>
-          <td class="list_column_icon"><image src="images/heart.png" class="icon" id="icon_saved"></image></td>
-          <td class="list_column_title"><a href="">!!!!! Sublease 2250 Dartmouth 2b2b !!!!!</a></td>
-          <td class="list_column_icon"><image src="images/offering.png" class="icon" id="icon_saved"></td>
-          <td class="list_column_price"> 550 obo</td>
-        </tr>
-        <tr>
-          <td class="list_column_icon"><image src="images/picture.png" class="icon" id="icon_picture"></image></td>
-          <td class="list_column_date">Mar 2</td>
-          <td class="list_column_icon"><image src="images/heart.png" class="icon" id="icon_saved"></image></td>
-          <td class="list_column_title"><a href="">Need ride to Houston during spring break </a></td>
-          <td class="list_column_icon"><img src="images/looking.png" class="icon" id="icon_saved"></td>
-          <td class="list_column_price"> share gas </td>
-        </tr>
-      </table>
+      <?php
+        if (mysqli_num_rows($posts) == 0) {
+            echo "<p>There is not any post yet.</p>";
+        } else {
+          echo "<table class=\"col-12 table table-striped table-hover rounded-bottom\">";
+          while($post = mysqli_fetch_assoc($posts)) {
+            echo "<tr class=\"\">";
+              echo "<td class=\"list_column_icon\">";
+
+              if($post["image"] != ''){
+                echo "<image src=\"images/picture.png\" class=\"icon\" id=\"icon_picture\">";
+              }
+
+              echo "</td>";
+              echo "<td class=\"list_column_date\">";
+              echo $post["post_date"];
+              echo "</td>";
+              echo "<td class=\"list_column_icon\"><image src=\"images/heart.png\" class=\"icon\" id=\"icon_saved\"></image></td>";
+              echo "<td class=\"list_column_title\"><a href=\"\">";
+              echo $post["title"];
+              echo "</a></td>";
+              echo "<td class=\"list_column_icon\"><image src=\"images/offering.png\" class=\"icon\" id=\"icon_saved\"></image></td>";
+              echo "<td class=\"list_column_price\">";
+              echo $post["price"];
+              echo "</td>";
+            echo "</tr>";
+          }
+          echo "</table>";
+        }
+      ?>
+
     </div><!-- close post_list  Section-->
   </div><!-- close section row -->
 </section>
