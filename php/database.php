@@ -1,6 +1,6 @@
 <?php
   define("DB_SERVER", "localhost");
-  define("DB_USER", "db_team27");
+  define("DB_USER", "team27");
   define("DB_PASS", "team27admin");
   define("DB_NAME", "aggieclassified");
 
@@ -33,7 +33,7 @@ function get_id_by_email($email) {
   function create_post($user_id, $title, $price, $contact, $category, $purpose, $description, $image) {
     global $db;
     $sql = "INSERT INTO post";
-    $sql .= "(user_id, title, price, contact, category, purpose, description, image)";
+    $sql .= "(user_id, title, price, contact, category, purpose, description, image) ";
     $sql .= "VALUES	(";
     $sql .= "'" . $user_id . "',";
     $sql .= "'" . $title . "',";
@@ -59,29 +59,19 @@ function get_id_by_email($email) {
     return $result;
   }
 
-<<<<<<< HEAD
   function get_bookmark($user_id) {
     global $db;
     $sql = "";
 
     $result = mysql_query($db, $sql);
-=======
-  function get_bookmark() {
-    global $db;
-
-  }
-
-  function register($email, $password) {
-
->>>>>>> 35297ae02d0e77f310164ee8f71c47e3c2593994
     return $result;
   }
 
   function add_bookmark($user_id) {
     global $db;
-    $sql = "";
+    // $sql = "";
 
-    return $result;
+    // return $result;
   }
 
   function register($email, $password) {
@@ -93,7 +83,7 @@ function get_id_by_email($email) {
     $sql .= "'" . $password . "'";
     $sql .= ")";
 
-    $result = mysql_query($db, $sql);
+    $result = mysqli_query($db, $sql);
     return $result;
   }
 
@@ -103,7 +93,7 @@ function get_id_by_email($email) {
     $sql .= "WHERE email = '" . $email . "'";
 
     $result = mysqli_query($db, $sql);
-    if (isset($result)) {
+    if ($result->lengths != 0) {
       return TRUE;
     } else {
       return FALSE;
