@@ -1,5 +1,8 @@
-<?php require_once('./php/initialize.php');
-    check_signin();
+<?php
+  require_once('./php/initialize.php');
+  $user_id = $_SESSION["user_id"];
+  check_signin($user_id);
+  $posts = get_bookmark($user_id);
 ?>
 
 <!DOCTYPE html>

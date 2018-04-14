@@ -1,7 +1,8 @@
-<?php require_once('./php/initialize.php');
-    check_signin();
-    // $user_id = $_SESSION["user_id"];
-    $posts = get_latest_20();
+<?php
+  require_once('./php/initialize.php');
+  $user_id = $_SESSION["user_id"];
+  check_signin($user_id);
+  $posts = get_latest_20();
 ?>
 
 <!DOCTYPE html>

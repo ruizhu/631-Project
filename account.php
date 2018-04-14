@@ -1,8 +1,9 @@
-<?php require_once('./php/initialize.php');
-    check_signin();
-    $user_id = $_SESSION["user_id"];
-    $posts = get_account_post($user_id);
-    // $posts = mysqli_fetch_assoc($posts);
+<?php
+  require_once('./php/initialize.php');
+  $user_id = $_SESSION["user_id"];
+  check_signin($user_id);
+  $posts = get_account_post($user_id);
+  // $posts = mysqli_fetch_assoc($posts);
 ?>
 
 <!DOCTYPE html>

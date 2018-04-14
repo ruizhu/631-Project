@@ -1,4 +1,5 @@
-<?php require_once('./php/initialize.php');
+<?php
+  require_once('./php/initialize.php');
 ?>
 
 <!doctype html>
@@ -10,7 +11,7 @@
     <meta name="author" content="">
     <link rel="icon" href="images/logo.png">
 
-    <title>Signin Template for Bootstrap</title>
+    <title>Register Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">

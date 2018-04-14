@@ -5,7 +5,7 @@
   $email = $_POST['email'] ?? '';
   $password = $_POST['password'] ?? '';
 
-  $result = login($email, $password);
+  $result = signin($email, $password);
 
   if($result) {
     $_SESSION["email"] = $email;

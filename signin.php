@@ -1,4 +1,5 @@
-<?php require_once('./php/initialize.php');
+<?php
+  require_once('./php/initialize.php');
 ?>
 
 <!doctype html>

@@ -1,4 +1,3 @@
-
 <header class="container-fluid mb-3" style="background-color:#500000">
   <div class="mx-auto container">
     <div class="row">
@@ -11,7 +10,7 @@
         <div class="row mb-md-5">
           <div class="row justify-content-end col-12">
             <div class="align-self-end ">
-              <a href="signin.php"><span class="align-self-end nav-font text-white">login</span></a>
+              <a href="<?php if($user_id) {echo "php/signout";} else {echo "signin";}?>.php"><span class="align-self-end nav-font text-white"><?php if($user_id) {echo "signout";} else {echo "signin";}?></span></a>
               &nbsp &nbsp
               <a href="register.php"><span class="align-self-end nav-font text-white">register</span></a>
             </div>

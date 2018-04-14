@@ -49,7 +49,7 @@ function get_id_by_email($email) {
     return $result;
   }
 
-  function login($email, $password) {
+  function signin($email, $password) {
     global $db;
     $sql = "SELECT * FROM user ";
     $sql .= "WHERE email = '" . $email . "'";
@@ -59,22 +59,49 @@ function get_id_by_email($email) {
     return $result;
   }
 
-  function get_bookmark() {
+  function get_bookmark($user_id) {
     global $db;
-    $sql = ""
+    $sql = "";
 
     $result = mysql_query($db, $sql);
     return $result;
   }
 
-  function register($email, $password) {
+  function add_bookmark($user_id) {
+    global $db;
+    $sql = "";
 
     return $result;
   }
 
+  function register($email, $password) {
+    global $db;
+    $sql = "INSERT INTO user";
+    $sql .= "(email, password) ";
+    $sql .= "VALUES (";
+    $sql .= "'" . $email . "', ";
+    $sql .= "'" . $password . "'";
+    $sql .= ")";
+
+    $result = mysql_query($db, $sql);
+    return $result;
+  }
+
+  function check_account_exist($email) {
+    global $db;
+    $sql = "SELECT user_id FROM user ";
+    $sql .= "WHERE email = '" . $email . "'";
+
+    $result = mysqli_query($db, $sql);
+    if (isset($result)) {
+      return TRUE;
+    } else {
+      return FALSE;
+    }
+  }
+
   function get_account_post($user_id) {
     global $db;
-
     $sql = "SELECT * FROM post ";
     $sql .= "WHERE user_id = '" . $user_id . "'";
 
