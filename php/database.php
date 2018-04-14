@@ -1,6 +1,6 @@
 <?php
   define("DB_SERVER", "localhost");
-  define("DB_USER", "team27");
+  define("DB_USER", "db_team27");
   define("DB_PASS", "team27admin");
   define("DB_NAME", "aggieclassified");
 
@@ -59,11 +59,21 @@ function get_id_by_email($email) {
     return $result;
   }
 
+<<<<<<< HEAD
   function get_bookmark($user_id) {
     global $db;
     $sql = "";
 
     $result = mysql_query($db, $sql);
+=======
+  function get_bookmark() {
+    global $db;
+
+  }
+
+  function register($email, $password) {
+
+>>>>>>> 35297ae02d0e77f310164ee8f71c47e3c2593994
     return $result;
   }
 
