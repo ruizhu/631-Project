@@ -47,20 +47,25 @@
           while($post = mysqli_fetch_assoc($posts)) {
             echo "<tr class=\"\">";
               echo "<td class=\"list_column_icon\">";
-
               if($post["image"] != ''){
                 echo "<image src=\"images/picture.png\" class=\"icon\" id=\"icon_picture\">";
               }
+              echo "</td>";
 
-              echo "</td>";
-              echo "<td class=\"list_column_date\">";
-              echo $post["post_date"];
-              echo "</td>";
-              echo "<td class=\"list_column_icon\"><image src=\"images/heart.png\" class=\"icon\" id=\"icon_saved\"></image></td>";
               echo "<td class=\"list_column_title\"><a href=\"\">";
               echo $post["title"];
               echo "</a></td>";
+
+              echo "<td class=\"list_column_icon\"><a href=\"\">";
+              echo "<image src=\"images/heart.png\" class=\"icon\" id=\"icon_saved\">";
+              echo "</a></image></td>";
+
+              echo "<td class=\"list_column_date\">";
+              echo $post["post_date"];
+              echo "</td>";
+
               echo "<td class=\"list_column_icon\"><image src=\"images/offering.png\" class=\"icon\" id=\"icon_saved\"></image></td>";
+
               echo "<td class=\"list_column_price\">";
               echo $post["price"];
               echo "</td>";

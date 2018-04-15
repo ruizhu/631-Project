@@ -63,15 +63,15 @@ function get_id_by_email($email) {
     global $db;
     $sql = "";
 
-    $result = mysql_query($db, $sql);
-    return $result;
+    // $result = mysql_query($db, $sql);
+    // return $result;
   }
 
   function add_bookmark($user_id) {
     global $db;
-    // $sql = "";
+    $sql = "";
 
-    // return $result;
+    return $result;
   }
 
   function register($email, $password) {
