@@ -59,6 +59,15 @@ function get_id_by_email($email) {
     return $result;
   }
 
+  function get_bookmark_id($user_id) {
+    global $db;
+    $sql = "SELECT post_id FROM bookmark ";
+    $sql .= "WHERE user_id = " . $user_id . "";
+
+    $result = mysqli_query($db, $sql);
+    return $result;
+  }
+
   function get_bookmark($user_id) {
     global $db;
     $sql = "SELECT * FROM post ";
