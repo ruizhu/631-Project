@@ -79,10 +79,15 @@ function get_id_by_email($email) {
     return $result;
   }
 
-  function add_bookmark($user_id) {
+  function add_bookmark($user_id, $post_id) {
     global $db;
-    $sql = "";
+    $sql = "INSERT INTO bookmark";
+    $sql .= "(user_id, post_id) VALUES (";
+    $sql .= "'" . $user_id . "', ";
+    $sql .= "'" . $post_id . "'";
+    $sql .= ")";
 
+    $result = mysqli_query($db, $sql);
     return $result;
   }
 

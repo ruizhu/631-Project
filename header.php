@@ -10,7 +10,7 @@
         <div class="row mb-md-5">
           <div class="row justify-content-end col-12">
             <div class="align-self-end ">
-              <a href="<?php if($user_id) {echo "php/sign out";} else {echo "sign in";}?>.php"><span class="align-self-end nav-font text-white"><?php if($user_id) {echo "signout";} else {echo "signin";}?></span></a>
+              <a href="<?php if($user_id) {echo "php/signout";} else {echo "signin";}?>.php"><span class="align-self-end nav-font text-white"><?php if($user_id) {echo "Sign out";} else {echo "Sign in";}?></span></a>
             </div>
           </div>
 
