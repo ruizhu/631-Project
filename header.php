@@ -1,54 +1,70 @@
-<header class="container-fluid mb-3" style="background-color:#500000">
-  <div class="mx-auto container">
+<header class=" d-none d-md-block">
+  <div class="container">
     <div class="row">
-      <div class="col-md-4 col-12">
-        <a href="index.php">
-          <img src="images/logo.png" class="img-fluid header-img">
-        </a>
+      <div class="col-12">
+        <ul class="list-inline text-right login_ul">
+          <li class="list-inline-item">
+            <a href="<?php if($user_id) {echo "php/sign out";} else {echo "sign in";}?>.php"><span class="align-self-end nav-font text-white"><?php if($user_id) {echo "signout";} else {echo "signin";}?></span></a>
+          </li>
+          <!-- <li class="list-inline-item"><a href="#a">register</a></li> -->
+        </ul>
       </div>
-      <div class="col-md-8 col-12">
-        <div class="row mb-md-5">
-          <div class="row justify-content-end col-12">
-            <div class="align-self-end ">
-              <a href="<?php if($user_id) {echo "php/signout";} else {echo "signin";}?>.php"><span class="align-self-end nav-font text-white"><?php if($user_id) {echo "signout";} else {echo "signin";}?></span></a>
-              &nbsp &nbsp
-              <a href="register.php"><span class="align-self-end nav-font text-white">register</span></a>
-            </div>
-          </div>
-
-        </div>
-        <div class="row align-self-end">
-          <nav class="nav col-md-7 col-12">
-            <div class="col-4 align-self-end nav-link rounded bg-darkmaroon">
-              <a class="text-white" href="account.php">
-                <img src="images/account.png" class="img-fluid">
-                <span class="nav-font">Account</span>
-              </a>
-            </div>
-            <div class="col-4 align-self-end nav-link rounded bg-darkmaroon">
-              <a class="text-white" href="bookmark.php">
-                <img src="images/bookmark.png" class="img-fluid">
-                <span class="nav-font">Bookmark</span>
-              </a>
-            </div>
-            <div class="col-4 align-self-end nav-link rounded bg-darkmaroon">
-              <a class="text-white" href="post-ad.php">
-                <img src="images/post-ad.png" class="img-fluid">
-                <span class="nav-font">Post Ad</span>
-              </a>
-            </div>
-          </nav>
-          <form class="col-md-5 col-12 align-self-end">
-              <div class="row">
-                <div class="col-1 d-md-none align-self-center "><img src="images/list.png" class="icon"></div>
-                <div class="input-group col-10">
-                  <input class="rounded-left form-control"  placeholder="Search.." name="search" >
-                  <div class="input-group-append">
-                    <button class="btn btn-secondary" type="submit"><a href=""><img src="images/search.png" class="icon rounded-right img-fluid"></a></button>
-                  </div>
-                </div>
+    </div>
+    <nav class="navbar navbar-toggleable-sm navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="material-icons">list</i>
+      </button>
+      <a class="navbar-brand" href="#"><img src="img/logo.png" class="img-responsive"></a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <ul class="navbar-nav mr-auto mt-2 ml-auto w-100 justify-content-start">
+          <li class="nav-item">
+            <a class="nav-link" href="#"> <i class="material-icons">account_circle</i> account </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="material-icons">bookmark</i> bookmark</a>
+          </li>
+          <li class="nav-item mright">
+            <a class="nav-link" href="#"><i class="material-icons">edit</i> post ad</a>
+          </li>
+          <li class="nav-item">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search.." aria-label="Search.." aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <span class="input-group-text" id="basic-addon2"><i class="material-icons">search</i></span>
               </div>
-            </form>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<header class=" d-block d-md-none">
+  <div class="container">
+    <div class="row">
+      <div class="col-8">
+        <a class="navbar-brand" href="#"><img src="img/logo.png" class="img-responsive"></a>
+      </div>
+      <div class="col-4">
+        <ul class="list-inline text-right login_ul">
+            <li class="list-inline-item"><a href="#a">login</a></li>
+          </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+
+        <ul class="list-inline menu_ul">
+          <li class="list-inline-item"><a href="#a"><i class="material-icons">account_circle</i></a></li>
+          <li class="list-inline-item"><a href="#a"><i class="material-icons">bookmark</i></a></li>
+          <li class="list-inline-item"><a href="#a"><i class="material-icons">edit</i></a></li>
+        </ul>
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search.." aria-label="Search.." aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <span class="input-group-text" id="basic-addon2"><i class="material-icons">search</i></span>
+          </div>
         </div>
       </div>
     </div>
