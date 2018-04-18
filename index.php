@@ -2,6 +2,7 @@
   require_once('./php/initialize.php');
   $user_id = $_SESSION["user_id"];
   check_signin($user_id);
+  $search = $_POST['search'] ?? '';
   $posts = get_latest_20();
 ?>
 
@@ -21,7 +22,6 @@
 
 <body>
 <?php include('./header.php'); ?>
-
 <section class="container">
   <div class="row">
     <div class="col-md-3 list-group" id="category_list"><!-- Category List Section-->

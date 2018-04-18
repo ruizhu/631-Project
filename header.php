@@ -36,13 +36,13 @@
               </a>
             </div>
           </nav>
-          <form class="col-md-5 col-12 align-self-end">
+          <form class="col-md-5 col-12 align-self-end" action="index.php" method="post">
               <div class="row">
                 <div class="col-1 d-md-none align-self-center "><img src="images/list.png" class="icon"></div>
                 <div class="input-group col-10">
                   <input class="rounded-left form-control"  placeholder="Search.." name="search" >
                   <div class="input-group-append">
-                    <button class="btn btn-secondary" type="submit"><a href=""><img src="images/search.png" class="icon rounded-right img-fluid"></a></button>
+                    <button class="btn btn-secondary" type="submit"><img src="images/search.png" class="icon rounded-right img-fluid"></button>
                   </div>
                 </div>
               </div>
