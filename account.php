@@ -35,39 +35,9 @@
       <div class="col-12">
         <hr>
         <h2>My Posts</h2><br>
-        <?php
-          if (mysqli_num_rows($posts) == 0) {
-              echo "<p>You do not have any posted yet.</p>";
-          } else {
-            echo "<table class=\"col-12 table table-striped table-hover rounded-bottom\">";
-            while($post = mysqli_fetch_assoc($posts)) {
-              echo "<tr class=\"\">";
-                echo "<td class=\"list_column_icon\">";
-                if($post["image"] != ''){
-                  echo "<image src=\"images/picture.png\" class=\"icon\" id=\"icon_picture\">";
-                }
-                echo "</td>";
 
-                echo "<td class=\"list_column_title\"><a href=\"\">";
-                echo $post["title"];
-                echo "</a></td>";
+        <?php include('./table.php'); ?>
 
-                echo "<td class=\"list_column_icon\"><image src=\"images/heart.png\" class=\"icon\" id=\"icon_saved\"></image></td>";
-
-                echo "<td class=\"list_column_date\">";
-                echo $post["post_date"];
-                echo "</td>";
-
-                echo "<td class=\"list_column_icon\"><image src=\"images/offering.png\" class=\"icon\" id=\"icon_saved\"></image></td>";
-
-                echo "<td class=\"list_column_price\">";
-                echo $post["price"];
-                echo "</td>";
-              echo "</tr>";
-            }
-            echo "</table>";
-          }
-        ?>
         <hr>
       </div>
     </div>
