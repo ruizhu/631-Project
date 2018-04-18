@@ -11,7 +11,7 @@
     <meta name="author" content="">
     <link rel="icon" href="images/logo.png">
 
-    <title>Register Template for Bootstrap</title>
+    <title>Aggie Classified | Register </title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
