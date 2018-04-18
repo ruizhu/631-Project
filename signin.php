@@ -89,7 +89,7 @@
       <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
       <div class="checkbox mb-3 text-white">
         <label>
-          <a class="register_link" href="#">New user? Register Here!</a>
+          <a class="register_link" href="register.php">New user? Register Here!</a>
         </label>
       </div>
       <button class="btn btn-lg btn-block" type="submit">Sign in</button>

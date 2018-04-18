@@ -1,24 +1,11 @@
 <?php
-$sql = "INSERT INTO post";
-$sql .= "(user_id, title, price, contact, category, purpose, description, image) ";
-$sql .= "VALUES	(";
-$sql .= "'" . $user_id . "',";
-$sql .= "'" . $title . "',";
-$sql .= "'" . $price . "',";
-$sql .= "'" . $contact . "',";
-$sql .= "'" . $category . "',";
-$sql .= "'" . $purpose . "',";
-$sql .= "'" . $description . "',";
-$sql .= "'" . $image . "'";
-$sql .= ")";
+$user_id = 3;
+$sql = "SELECT * FROM post ";
+$sql .= "WHERE post_id IN (";
+$sql .= "SELECT post_id FROM bookmark ";
+$sql .= "WHERE user_id = " . $user_id . ")";
+
 
   echo $sql;
 
-  $sql = "INSERT INTO user";
-  $sql .= "(email, password) ";
-  $sql .= "VALUES (";
-  $sql .= "'" . $email . "', ";
-  $sql .= "'" . $password . "'";
-  $sql .= ")";
- echo $sql;
 ?>

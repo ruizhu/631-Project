@@ -61,10 +61,13 @@ function get_id_by_email($email) {
 
   function get_bookmark($user_id) {
     global $db;
-    $sql = "";
+    $sql = "SELECT * FROM post ";
+    $sql .= "WHERE post_id IN (";
+    $sql .= "SELECT post_id FROM bookmark ";
+    $sql .= "WHERE user_id = '". $user_id . "')";
 
-    // $result = mysql_query($db, $sql);
-    // return $result;
+    $result = mysqli_query($db, $sql);
+    return $result;
   }
 
   function add_bookmark($user_id) {
