@@ -11,7 +11,7 @@
     <meta name="author" content="">
     <link rel="icon" href="images/logo.png">
 
-    <title>Signin Template for Bootstrap</title>
+    <title>Aggie Classified | Sign In </title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
