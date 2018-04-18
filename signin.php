@@ -68,6 +68,14 @@
         border-top-left-radius: 0;
         border-top-right-radius: 0;
       }
+      .register_link{
+        text-decoration: none;
+        color: white;
+      }
+      .register_link:hover{
+        text-decoration: underline;
+        color: white;
+      }
     </style>
   </head>
 
@@ -81,7 +89,7 @@
       <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
       <div class="checkbox mb-3 text-white">
         <label>
-          <input type="checkbox" value="remember-me"> Remember me
+          <a class="register_link" href="#">New user? Register Here!</a>
         </label>
       </div>
       <button class="btn btn-lg btn-block" type="submit">Sign in</button>
