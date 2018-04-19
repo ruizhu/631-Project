@@ -10,7 +10,6 @@
   if($result) {
     $_SESSION["email"] = $email;
     $_SESSION["user_id"] = get_id_by_email($email);
-    // $_SESSION["bookmark_id"] = get_bookmark_id($_SESSION["user_id"]);
     header('Location: ../index.php');
   } else {
     echo "fail<br />";

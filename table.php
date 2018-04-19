@@ -15,7 +15,9 @@
         echo $post["title"];
         echo "</a></td>";
 
-        echo "<td class=\"list_column_icon\"><a href=\"php\\add_bookmark.php\">";
+        echo "<td class=\"list_column_icon\"><a href=\"php\\add_bookmark.php?post_id=";
+        echo $post["post_id"];
+        echo "\" target=\"_blank\">";
         echo "<image src=\"images/heart.png\" class=\"icon\" id=\"icon_saved\">";
         echo "</a></image></td>";
 
