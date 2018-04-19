@@ -36,7 +36,8 @@
         <hr>
         <h2>My Posts</h2><br>
 
-        <?php include('./table.php'); ?>
+        <?php include('./table_desktop.php'); ?>
+        <?php include('./table_mobile.php'); ?>
 
         <hr>
       </div>

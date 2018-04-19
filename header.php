@@ -8,7 +8,7 @@
       <div class="col-8 align-self-stretch">
         <div class="row justify-content-end align-self-start mr-0">
           <div class="nav-link bg-darkmaroon">
-              <a class="text-white" href="<?php if($user_id) {echo "php/sign out";} else {echo "sign in";}?>.php"><span class="text-white"><?php if($user_id) {echo "signout";} else {echo "signin";}?></span></a>
+              <a class="text-white" href="<?php if($user_id) {echo "php/signout";} else {echo "signin";}?>.php"><span class="text-white"><?php if($user_id) {echo "Signout";} else {echo "Signin";}?></span></a>
           </div>
         </div>
         <div class="row mt-4 pt-1">

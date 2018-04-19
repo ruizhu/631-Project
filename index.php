@@ -2,7 +2,7 @@
   require_once('./php/initialize.php');
   $user_id = $_SESSION["user_id"];
   check_signin($user_id);
-  $keyword = $_POST['search'] ?? '';
+  $keyword = $_POST['search'] ?? $_GET['search'] ?? '';
   $posts = get_latest_20($keyword);
 ?>
 
@@ -21,29 +21,83 @@
 <!-- -->
 
 <body>
+
 <?php include('./header.php'); ?>
-<section class="container">
+
+<!-- Start desktop layout section-->
+<section class="d-none d-md-block container">
   <div class="row">
-    <div class="col-md-3 list-group" id="category_list"><!-- Category List Section-->
-      <a href="#" class="list-group-item bg-gray text-white">All Categories<span class="badge"></span></a>
-      <a href="#" class="list-group-item bg-gray text-white">Activity Partners<span class="badge">(36)</span></a>
-      <a href="#" class="list-group-item bg-gray text-white">Collections<span class="badge">(16)</span></a>
-      <a href="#" class="list-group-item bg-gray text-white">Books<span class="badge">(39)</span></a>
-      <a href="#" class="list-group-item bg-gray text-white">Electronics<span class="badge">(223)</span></a>
-      <a href="#" class="list-group-item bg-gray text-white">Furniture<span class="badge">(171)</span></a>
-      <a href="#" class="list-group-item bg-gray text-white">Jobs<span class="badge">(131)</span></a>
-      <a href="#" class="list-group-item bg-gray text-white">Lost&Found<span class="badge">(30)</span></a>
-      <a href="#" class="list-group-item bg-gray text-white">Carpools<span class="badge">(135)</span></a>
-      <a href="#" class="list-group-item bg-gray text-white">Sublet&Roommates<span class="badge">(680)</span></a>
-      <a href="#" class="list-group-item bg-gray text-white">Vehicle<span class="badge">(68)</span></a>
+    <div class="col-md-3 list-group " id="category_list"><!-- Category List Section-->
+      <a href="#" class="list-group-item bg-maroongray text-white">All Categories<span class="badge"></span></a>
+      <a href="#" class="list-group-item bg-maroongray text-white">Activity Partners<span class="badge"></span></a>
+      <a href="#" class="list-group-item bg-maroongray text-white">Collections<span class="badge"></span></a>
+      <a href="#" class="list-group-item bg-maroongray text-white">Books<span class="badge"></span></a>
+      <a href="#" class="list-group-item bg-maroongray text-white">Electronics<span class="badge"></span></a>
+      <a href="#" class="list-group-item bg-maroongray text-white">Furniture<span class="badge"></span></a>
+      <a href="#" class="list-group-item bg-maroongray text-white">Jobs<span class="badge"></span></a>
+      <a href="#" class="list-group-item bg-maroongray text-white">Lost&Found<span class="badge"></span></a>
+      <a href="#" class="list-group-item bg-maroongray text-white">Carpools<span class="badge"></span></a>
+      <a href="#" class="list-group-item bg-maroongray text-white">Sublet&Roommates<span class="badge"></span></a>
+      <a href="#" class="list-group-item bg-maroongray text-white">Vehicle<span class="badge"></span></a>
     </div><!-- close category_list Section-->
 
     <div class="pl-md-0 pr-md-0 table-responsive col-md-9 rounded" id="post_list"><!-- Main List Section-->
-      <?php include('./table.php'); ?>
-
+      <?php include('./table_desktop.php'); ?>
     </div><!-- close post_list  Section-->
   </div><!-- close section row -->
 </section>
+<!-- *** desktop table goes here***-->
+<!-- End desktop layout section-->
+
+<!-- Start mobile layout section-->
+<?php include('./table_mobile.php') ?>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <h5>Categories</h5>
+  <ul class="list-unstyled category_ul">
+    <li><a class="text-white" href="#a">All Categories</a></li>
+    <li><a class="text-white" href="#a">Activity Partners</a></li>
+    <li><a class="text-white" href="#a">Collections</a></li>
+    <li><a class="text-white" href="#a">Rooks</a></li>
+    <li><a class="text-white" href="#a">Electronics</a></li>
+    <li><a class="text-white" href="#a">Furniture</a></li>
+    <li><a class="text-white" href="#a">Jobs</a></li>
+    <li><a class="text-white" href="#a">Lost&amp;Found</a></li>
+    <li><a class="text-white" href="#a">Carpools</a></li>
+    <li><a class="text-white" href="#a">Sublet&amp;Roommates</a></li>
+    <li><a class="text-white" href="#a">Vehicle</a></li>
+  </ul>
+</div>
+<!-- End mobile layout section-->
+
+<!-- Start post detail overlay-->
+<div id="overlay" onclick="closeOverlay()"></div>
+<!-- End post detail overlay-->
+
+<!-- Load Javascript at end of document to improve performance -->
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("myFile");
+  }
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+
+  function openOverlay() {
+    document.getElementById("overlay").style.display = "block";
+  }
+
+  function closeOverlay() {
+    document.getElementById("overlay").style.display = "none";
+  }
+</script>
 
 </body>
 </html>
