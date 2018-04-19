@@ -1,6 +1,6 @@
 <?php
   if (mysqli_num_rows($posts) == 0) {
-      echo "<p>There is not any post yet.</p>";
+      echo "<p>There is no post yet.</p>";
   } else {
     echo "<table class=\"col-12 table table-striped table-hover rounded-bottom\">";
     while($post = mysqli_fetch_assoc($posts)) {
