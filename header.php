@@ -48,7 +48,7 @@
     </div>
     <div class="col-3 pl-0 pr-0">
       <div class="nav-link bg-darkmaroon">
-          <a class="text-white" href="<?php if($user_id) {echo "php/sign out";} else {echo "sign in";}?>.php"><span class="text-white"><?php if($user_id) {echo "signout";} else {echo "signin";}?></span></a>
+          <a class="text-white" href="<?php if($user_id) {echo "php/signout";} else {echo "signin";}?>.php"><span class="text-white"><?php if($user_id) {echo "Signout";} else {echo "Signin";}?></span></a>
       </div>
     </div>
   </div>

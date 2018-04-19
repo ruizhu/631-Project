@@ -121,10 +121,11 @@ function get_id_by_email($email) {
     $sql .= "WHERE email = '" . $email . "'";
 
     $result = mysqli_query($db, $sql);
-    if ($result->lengths != 0) {
-      return TRUE;
-    } else {
+
+    if(mysqli_num_rows($result) == 0) {
       return FALSE;
+    } else {
+      return TRUE;
     }
   }
 
@@ -137,5 +138,14 @@ function get_id_by_email($email) {
     return $result;
   }
 
+  function change_password($user_id, $password) {
+    global $db;
+    $sql = "UPDATE user ";
+    $sql .= "SET password = '" . $password . "'";
+    $sql .= "WHERE user_id = " . $user_id . "";
+
+    $result = mysqli_query($db, $sql);
+    return $result;
+  }
 
  ?>
