@@ -28,17 +28,17 @@
 <section class="d-none d-md-block container">
   <div class="row">
     <div class="col-md-3 list-group " id="category_list"><!-- Category List Section-->
-      <a href="#" class="list-group-item bg-maroongray text-white">All Categories<span class="badge"></span></a>
-      <a href="#" class="list-group-item bg-maroongray text-white">Activity Partners<span class="badge"></span></a>
-      <a href="#" class="list-group-item bg-maroongray text-white">Collections<span class="badge"></span></a>
-      <a href="#" class="list-group-item bg-maroongray text-white">Books<span class="badge"></span></a>
-      <a href="#" class="list-group-item bg-maroongray text-white">Electronics<span class="badge"></span></a>
-      <a href="#" class="list-group-item bg-maroongray text-white">Furniture<span class="badge"></span></a>
-      <a href="#" class="list-group-item bg-maroongray text-white">Jobs<span class="badge"></span></a>
-      <a href="#" class="list-group-item bg-maroongray text-white">Lost&Found<span class="badge"></span></a>
-      <a href="#" class="list-group-item bg-maroongray text-white">Carpools<span class="badge"></span></a>
-      <a href="#" class="list-group-item bg-maroongray text-white">Sublet&Roommates<span class="badge"></span></a>
-      <a href="#" class="list-group-item bg-maroongray text-white">Vehicle<span class="badge"></span></a>
+      <a href="./index.php?search=" class="list-group-item bg-maroongray text-white">All Categories<span class="badge"></span></a>
+      <a href="./index.php?search=Activity%20Partners" class="list-group-item bg-maroongray text-white">Activity Partners<span class="badge"></span></a>
+      <a href="./index.php?search=Collections" class="list-group-item bg-maroongray text-white">Collections<span class="badge"></span></a>
+      <a href="./index.php?search=Books" class="list-group-item bg-maroongray text-white">Books<span class="badge"></span></a>
+      <a href="./index.php?search=Electronics" class="list-group-item bg-maroongray text-white">Electronics<span class="badge"></span></a>
+      <a href="./index.php?search=Furniture" class="list-group-item bg-maroongray text-white">Furniture<span class="badge"></span></a>
+      <a href="./index.php?search=Jobs" class="list-group-item bg-maroongray text-white">Jobs<span class="badge"></span></a>
+      <a href="./index.php?search=Lost&Found" class="list-group-item bg-maroongray text-white">Lost&Found<span class="badge"></span></a>
+      <a href="./index.php?search=Carpools" class="list-group-item bg-maroongray text-white">Carpools<span class="badge"></span></a>
+      <a href="./index.php?search=Sublet&Roommates" class="list-group-item bg-maroongray text-white">Sublet&Roommates<span class="badge"></span></a>
+      <a href="./index.php?search=Vehicle" class="list-group-item bg-maroongray text-white">Vehicle<span class="badge"></span></a>
     </div><!-- close category_list Section-->
 
     <div class="pl-md-0 pr-md-0 table-responsive col-md-9 rounded" id="post_list"><!-- Main List Section-->
@@ -55,17 +55,17 @@
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <h5>Categories</h5>
   <ul class="list-unstyled category_ul">
-    <li><a class="text-white" href="#a">All Categories</a></li>
-    <li><a class="text-white" href="#a">Activity Partners</a></li>
-    <li><a class="text-white" href="#a">Collections</a></li>
-    <li><a class="text-white" href="#a">Rooks</a></li>
-    <li><a class="text-white" href="#a">Electronics</a></li>
-    <li><a class="text-white" href="#a">Furniture</a></li>
-    <li><a class="text-white" href="#a">Jobs</a></li>
-    <li><a class="text-white" href="#a">Lost&amp;Found</a></li>
-    <li><a class="text-white" href="#a">Carpools</a></li>
-    <li><a class="text-white" href="#a">Sublet&amp;Roommates</a></li>
-    <li><a class="text-white" href="#a">Vehicle</a></li>
+    <li><a class="text-white" href="./index.php?search=">All Categories</a></li>
+    <li><a class="text-white" href="./index.php?search=Activity Partners">Activity Partners</a></li>
+    <li><a class="text-white" href="./index.php?search=Collections">Collections</a></li>
+    <li><a class="text-white" href="./index.php?search=Rooks">Rooks</a></li>
+    <li><a class="text-white" href="./index.php?search=Electronics">Electronics</a></li>
+    <li><a class="text-white" href="./index.php?search=Furniture">Furniture</a></li>
+    <li><a class="text-white" href="./index.php?search=Jobs">Jobs</a></li>
+    <li><a class="text-white" href="./index.php?search=Lost&Found">Lost&amp;Found</a></li>
+    <li><a class="text-white" href="./index.php?search=Carpools">Carpools</a></li>
+    <li><a class="text-white" href="./index.php?search=Sublet&Roommates">Sublet&amp;Roommates</a></li>
+    <li><a class="text-white" href="./index.php?search=Vehicle">Vehicle</a></li>
   </ul>
 </div>
 <!-- End mobile layout section-->
