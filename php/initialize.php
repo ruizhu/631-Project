@@ -6,13 +6,8 @@
   session_start();
 
   function check_signin($user_id) {
-<<<<<<< HEAD
     if(!isset($user_id)) {
       header('Location: ../signin.php');
-=======
-     if(!isset($user_id)) {
-       header('Location: ../signin.php');
->>>>>>> b5422c62267ea00ef2f003c234f64f7f2307ed67
     }
   }
 ?>
