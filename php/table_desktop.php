@@ -6,7 +6,7 @@
     while($post = mysqli_fetch_assoc($posts)) {
       echo "<tr data-toggle=\"modal\" data-target=\"#postDetailModel\" id=\"post_id_";
       echo $post["post_id"];
-      echo "\"";
+      echo "\">";
 
       echo "<td class=\"d-none\">";
       echo $post["post_id"];
@@ -23,6 +23,7 @@
       echo "<td class=\"d-none\">";
       echo $post["image"];
       echo "</td>";
+
 
 
       echo "<td class=\"list_column_icon\" style=\"width: 7%\">";
@@ -53,7 +54,6 @@
       echo "<td class=\"list_column_price\" style=\"width: 19%\">";
       echo $post["price"];
       echo "</td>";
-
       echo "</tr>";
     }
     echo "</table>";
