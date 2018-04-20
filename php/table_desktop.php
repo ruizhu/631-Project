@@ -4,22 +4,22 @@
   } else {
     echo "<table class=\"col-12 table table-striped table-hover rounded-bottom\" id=\"main_table\">";
     while($post = mysqli_fetch_assoc($posts)) {
-      echo "<tr data-toggle=\"modal\" data-target=\"#postDetailModel\">";
+      echo "<tr data-toggle=\"modal\" data-target=\"#postDetailModel\" data-post_id=";
+      echo $post["post_id"];
+      echo ">";
         echo "<td class=\"list_column_icon\" style=\"width: 7%\">";
         if($post["image"] != ''){
           echo "<i class=\"material-icons\" style=\"width: 7%\">camera_alt</i>";
         }
         echo "</td>";
 
-        echo "<td class=\"list_column_title\" style=\"width: 50%\"><a href=\"\">";
+        echo "<td class=\"list_column_title\" style=\"width: 50%\">";
         echo $post["title"];
-        echo "</a></td>";
+        echo "</td>";
 
-        echo "<td class=\"list_column_icon\" style=\"width: 7%\"><a href=\"php\\add_bookmark.php?post_id=";
-        echo $post["post_id"];
-        echo "\" target=\"_blank\">";
+        echo "<td class=\"list_column_icon\" style=\"width: 7%\">";
         echo "<i class=\"material-icons\" style=\"width: 7%\">bookmark</i>";
-        echo "</a></td>";
+        echo "</td>";
 
         echo "<td class=\"list_column_date\" style=\"width: 10%\">";
         echo substr($post["post_date"], 5, 5);
