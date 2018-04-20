@@ -67,7 +67,11 @@ function get_id_by_email($email) {
     $sql .= "AND password = '" . $password . "'";
 
     $result = mysqli_query($db, $sql);
-    return $result;
+    if(mysqli_num_rows($result) == 0) {
+      return FALSE;
+    } else {
+      return TRUE;
+    }
   }
 
   function get_bookmark_id($user_id) {
@@ -100,6 +104,20 @@ function get_id_by_email($email) {
 
     $result = mysqli_query($db, $sql);
     return $result;
+  }
+
+  function check_bookmarked($user_id, $post_id) {
+    global $db;
+    $sql = "SELECT post_id FROM bookmark ";
+    $sql .= "WHERE user_id = '" . $user_id . "' ";
+    $sql .= "AND post_id = '" . $post_id . "'";
+
+    $result = mysqli_query($db, $sql);
+    if(mysqli_num_rows($result) == 0) {
+      return FALSE;
+    } else {
+      return TRUE;
+    }
   }
 
   function register($email, $password) {

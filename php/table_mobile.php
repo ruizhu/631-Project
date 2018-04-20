@@ -15,8 +15,11 @@
       echo $post["title"];
       echo "</div>";
       // bookmark part
-      echo "<div class=\"col-2 d-flex align-self-center justify-content-center pr-1\"><i class=\"material-icons\">bookmark</i></div>";
-      echo "</div>";
+      echo "<div class=\"col-2 d-flex align-self-center justify-content-center pr-1\">";
+      if (check_bookmarked($user_id, $post["post_id"])) {
+        echo "<i class=\"material-icons\" style=\"width: 7%\">bookmark</i>";
+      }
+      echo "</div></div>";
       //date part
       echo "<div class=\"row p-1\">";
       echo "<div class=\"col-4 d-flex\">";
