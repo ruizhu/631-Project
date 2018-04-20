@@ -114,17 +114,26 @@
     </div><!-- close category_list Section-->
 
     <div class="pl-md-0 pr-md-0 table-responsive col-md-9 rounded" id="post_list"><!-- Main List Section-->
-      <?php include('./table.php'); ?>
-
+      <table class="col-12 table table-striped table-hover rounded-bottom" id="main_table">
+        <tbody>
+          <tr data-toggle="modal" data-target="#postDetailModel">
+            <td class="list_column_icon" style="width: 7%"></td>
+            <td class="list_column_title" style="width: 50%"><a href="">asdfasdfasdf</a></td>
+            <td class="list_column_icon" style="width: 7%"><a href="php\add_bookmark.php?post_id=1" target="_blank"><i class="material-icons" style="width: 7%">bookmark</i></a></td>
+            <td class="list_column_date" style="width: 10%">04-19</td>
+            <td class="list_column_icon" style="width: 7%"><i class="material-icons">search</i></td>
+            <td class="list_column_price" style="width: 19%">135</td>
+          </tr>
+        </tbody>
+      </table>
     </div><!-- close post_list  Section-->
   </div><!-- close section row -->
 </section>
-<!-- *** desktop table goes here***-->
 <!-- End desktop layout section-->
 
 <!-- Start mobile layout section-->
 <section class="d-block d-md-none container pl-2 pr-1">
-  <div class="bg-white p-2 rounded" onclick="openOverlay()">
+  <div class="bg-white p-2 rounded" data-toggle="modal" data-target="#postDetailModel">
     <div class="row p-1">
       <div class="col-2 d-flex align-self-center justify-content-center pl-1"><i class="material-icons">camera_alt</i></div>
       <div class="col-8 d-flex">ISTM 631 bookISTM 631 bookISTM 631 bookISTM 631 bookISTM 631 book</div>
@@ -156,7 +165,23 @@
 <!-- End mobile layout section-->
 
 <!-- Start post detail overlay-->
-<div id="overlay" onclick="closeOverlay()"></div>
+<div class="modal fade" id="postDetailModel" tabindex="-1" role="dialog" aria-labelledby="postDetailModelTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <?php include('./php/header.php'); ?>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Bookmark this</button>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- End post detail overlay-->
 
 <!-- Load Javascript at end of document to improve performance -->

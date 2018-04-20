@@ -59,7 +59,7 @@
         <div class="col-lg-6 col-md-6">
           <div class="form-group">
             <label for="category">Category</label>
-            <select class="form-control" name="category">
+            <select class="form-control" name="category" style="height: 45px;">
               <option disabled selected value style="display:none"> </option>
               <option>Activity Partners</option>
               <option>Collections</option>
@@ -80,7 +80,7 @@
         <div class="col-lg-6 col-md-6">
           <div class="form-group">
             <label for="purpose">Ad Purpose</label>
-            <select class="form-control" name="purpose">
+            <select class="form-control" name="purpose" style="height: 45px;">
               <option disabled selected value style="display:none"> </option>
               <option>Looking</option>
               <option>Selling</option>
@@ -93,7 +93,7 @@
         <div class="col-12">
           <div class="form-group">
             <label for="title">Ad Description</label>
-            <textarea id="description" name="description" cols="5" rows="5" class="form-control"></textarea>
+            <textarea id="description" name="description" cols="5" rows="4" class="form-control" style="height: 150px;"></textarea>
             <!-- <small id="title" class="form-text">A Description is required</small> -->
           </div>
         </div>

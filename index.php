@@ -72,7 +72,18 @@
 <!-- End mobile layout section-->
 
 <!-- Start post detail overlay-->
-<div id="overlay" onclick="closeOverlay()"></div>
+<div class="modal fade" id="postDetailModel" tabindex="-1" role="dialog" aria-labelledby="postDetailModelTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <?php include('./php/post_detail.php'); ?>
+    </div>
+  </div>
+</div>
 <!-- End post detail overlay-->
 
 <!-- Load Javascript at end of document to improve performance -->

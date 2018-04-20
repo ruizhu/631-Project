@@ -2,32 +2,35 @@
   if (mysqli_num_rows($posts) == 0) {
       echo "<p>There is no post yet.</p>";
   } else {
-    echo "<table class=\"col-12 table table-striped table-hover rounded-bottom\">";
+    echo "<table class=\"col-12 table table-striped table-hover rounded-bottom\" id=\"main_table\">";
     while($post = mysqli_fetch_assoc($posts)) {
-      echo "<tr class=\"\">";
-        echo "<td class=\"list_column_icon\">";
+      echo "<tr data-toggle=\"modal\" data-target=\"#postDetailModel\">";
+        echo "<td class=\"list_column_icon\" style=\"width: 7%\">";
         if($post["image"] != ''){
-          echo "<image src=\"images/picture.png\" class=\"icon\" id=\"icon_picture\">";
+          echo "<i class=\"material-icons\" style=\"width: 7%\">camera_alt</i>";
         }
         echo "</td>";
 
-        echo "<td class=\"list_column_title\"><a href=\"\">";
+        echo "<td class=\"list_column_title\" style=\"width: 50%\"><a href=\"\">";
         echo $post["title"];
         echo "</a></td>";
 
-        echo "<td class=\"list_column_icon\"><a href=\"php\\add_bookmark.php?post_id=";
+        echo "<td class=\"list_column_icon\" style=\"width: 7%\"><a href=\"php\\add_bookmark.php?post_id=";
         echo $post["post_id"];
         echo "\" target=\"_blank\">";
-        echo "<image src=\"images/heart.png\" class=\"icon\" id=\"icon_saved\">";
-        echo "</a></image></td>";
+        echo "<i class=\"material-icons\" style=\"width: 7%\">bookmark</i>";
+        echo "</a></td>";
 
-        echo "<td class=\"list_column_date\">";
-        echo $post["post_date"];
+        echo "<td class=\"list_column_date\" style=\"width: 10%\">";
+        echo substr($post["post_date"], 5, 5);
         echo "</td>";
 
-        echo "<td class=\"list_column_icon\"><image src=\"images/offering.png\" class=\"icon\" id=\"icon_saved\"></image></td>";
-
-        echo "<td class=\"list_column_price\">";
+        if ($post["purpose"] != 'Looking'){
+          echo "<td class=\"list_column_icon\" style=\"width: 7%\"><i class=\"material-icons\">local_offer</i></td>";
+        } else {
+          echo "<td class=\"list_column_icon\" style=\"width: 7%\"><i class=\"material-icons\">search</i></td>";
+        }
+        echo "<td class=\"list_column_price\" style=\"width: 19%\">";
         echo $post["price"];
         echo "</td>";
       echo "</tr>";

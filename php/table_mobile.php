@@ -2,7 +2,7 @@
   mysqli_data_seek($posts, 0);
   while($post = mysqli_fetch_assoc($posts)) {
     echo "<section class=\"d-block d-md-none container pl-2 pr-1\">";
-      echo "<div class=\"bg-white p-2 rounded\" onclick=\"openOverlay()\">";
+      echo "<div class=\"bg-white p-2 rounded\" data-toggle=\"modal\" data-target=\"#postDetailModel\">";
       echo "<div class=\"row p-1\">";
       // image part
       echo "<div class=\"col-2 d-flex align-self-center justify-content-center pl-1\">";
@@ -20,10 +20,15 @@
       //date part
       echo "<div class=\"row p-1\">";
       echo "<div class=\"col-4 d-flex\">";
-      echo substr($post["post_date"], 0, 10);
+      echo substr($post["post_date"], 5, 5);
       echo "</div>";
       //local offer and price part
-      echo "<div class=\"col-8 d-flex justify-content-end\"><i class=\"material-icons\">local_offer</i>";
+      if($post["purpose"] != 'Looking'){
+        echo "<div class=\"col-8 d-flex justify-content-end\"><i class=\"material-icons\">local_offer</i>";
+      } else {
+        echo "<div class=\"col-8 d-flex justify-content-end\"><i class=\"material-icons\">search</i>";
+      }
+
       echo $post["price"];
       echo "</div>";
       echo "</div></div></section>";

@@ -52,24 +52,35 @@ a:focus,a:hover {
     cursor: pointer; /* Add a pointer on hover */
 }
 
+.overlay_background {
+  left: 50%;
+  right: auto;
+  width: 600px;
+  min-height: 300px;
+  margin: 10 auto;
+  padding: 30px 15px;
+  background-color: white;
+  box-shadow: 5px 5px 10px grey;
+}
+
 
 
 /* Post Ad Page Style */
 .post_ad label{
     color: #500000;
-    font-size: 18px;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
 .post_ad small{
     color: #500000;
-    font-size: 16px;
+    font-size: 0.9rem;
     font-weight: bold;
 }
 
 .post_ad .form-control{
     height: 45px;
-    font-size: 18px;
+    font-size: 1rem;
     color: #500000;
     border: 2px solid rgba(0,0,0,.15)
 }
