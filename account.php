@@ -19,8 +19,8 @@
 <!-- backup comment available down here just copy and use. -->
 <!-- -->
 
-<body>
-<?php include('./header.php'); ?>
+<body style="background-color:#ebebeb;">
+<?php include('./php/header.php'); ?>
 
 <section class="containter">
 
@@ -36,8 +36,8 @@
         <hr>
         <h2>My Posts</h2><br>
 
-        <?php include('./table_desktop.php'); ?>
-        <?php include('./table_mobile.php'); ?>
+        <?php include('./php/table_desktop.php'); ?>
+        <?php include('./php/table_mobile.php'); ?>
 
         <hr>
       </div>

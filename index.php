@@ -20,9 +20,9 @@
 <!-- backup comment available down here just copy and use. -->
 <!-- -->
 
-<body>
+<body style="background-color:#ebebeb;">
 
-<?php include('./header.php'); ?>
+<?php include('./php/header.php'); ?>
 
 <!-- Start desktop layout section-->
 <section class="d-none d-md-block container">
@@ -42,7 +42,7 @@
     </div><!-- close category_list Section-->
 
     <div class="pl-md-0 pr-md-0 table-responsive col-md-9 rounded" id="post_list"><!-- Main List Section-->
-      <?php include('./table_desktop.php'); ?>
+      <?php include('./php/table_desktop.php'); ?>
     </div><!-- close post_list  Section-->
   </div><!-- close section row -->
 </section>
@@ -50,7 +50,6 @@
 <!-- End desktop layout section-->
 
 <!-- Start mobile layout section-->
-<?php include('./table_mobile.php') ?>
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <h5>Categories</h5>
@@ -68,6 +67,8 @@
     <li><a class="text-white" href="./index.php?search=Vehicle">Vehicle</a></li>
   </ul>
 </div>
+
+<?php include('./php/table_mobile.php') ?>
 <!-- End mobile layout section-->
 
 <!-- Start post detail overlay-->
