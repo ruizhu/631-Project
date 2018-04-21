@@ -27,9 +27,9 @@ a:focus,a:hover {
 .bg-maroongray {background-color: #815555;}
 .bg-maroongray:hover {background-color: #584343;}
 .bg-maroongray:active {background-color: #402B2B;}
-
 .material-icons.md-light { color: rgba(255, 255, 255, 1); }
 .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
 
 
 /* index page Style*/

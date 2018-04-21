@@ -4,7 +4,7 @@
   } else {
     echo "<table class=\"col-12 table table-striped table-hover rounded-bottom\" id=\"main_table\">";
     while($post = mysqli_fetch_assoc($posts)) {
-      echo "<tr data-toggle=\"modal\" data-target=\"#postDetailModalDesktop\" data-post_id=\"post_id_";
+      echo "<tr data-toggle=\"modal\" style=\"cursor:pointer;\" data-target=\"#postDetailModalDesktop\" data-post_id=\"post_id_";
       echo $post["post_id"];
       echo "\" id=\"post_id_";
       echo $post["post_id"];

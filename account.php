@@ -62,10 +62,111 @@
   </div>
 </section>
 
+<!-- Start desktop post detail overlay-->
+<div class="modal fade" id="postDetailModalDesktop" tabindex="-1" role="dialog" aria-labelledby="postDetailModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-maroon">
+        <h5 class="text-white" id="postDetailTitle">Post Title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="text-white">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <b class="col-3 text-right">Posted</b><div class="col-9 text-left" id="postDetailDate"></div>
+        </div>
+        <div class="row">
+          <b class="col-3 text-right">Contact</b></p><div class="col-9 text-left" id="postDetailContact"></div>
+        </div>
+        <div class="row">
+          <b class="col-md-3 text-md-right">Description</b></p><div class="col-md-9" id="postDetailDesc" style="word-wrap:break-word;"></div>
+        </div>
+        <div class="row">
+          <b class="col-3 text-right">Price</b><p class="col-9 text-left" id="postDetailPrice"></p>
+        </div>
+        <div class="row">
+          <img class="col-12" id="postDetailImage">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default">Detele Post</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End desktop post detail overlay-->
+<!-- Start mobile post detail overlay-->
+<div class="modal fade" id="postDetailModalMobile" tabindex="-1" role="dialog" aria-labelledby="postDetailModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-maroon">
+        <h5 class="text-white" id="postDetailTitle">Post Title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="text-white">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <b class="col-3 text-right">Posted</b><div class="col-9 text-left" id="postDetailDateMobile"></div>
+        </div>
+        <div class="row">
+          <b class="col-3 text-right">Contact</b></p><div class="col-9 text-left" id="postDetailContactMobile"></div>
+        </div>
+        <div class="row">
+          <b class="col-md-3 text-md-right">Description</b></p><div class="col-md-9" id="postDetailDescMobile" style="word-wrap:break-word;"></div>
+        </div>
+        <div class="row">
+          <b class="col-3 text-right">Price</b><p class="col-9 text-left" id="postDetailPriceMobile"></p>
+        </div>
+        <div class="row">
+          <img class="col-12" id="postDetailImageMobile">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default">Detele Post</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End mobile post detail overlay-->
 
-
+<!-- Load Javascript at end of document to improve performance -->
 <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+
+<script>
+  function myFunction() {var x = document.getElementById("myFile");}
+  function openNav() {document.getElementById("mySidenav").style.width = "250px";}
+  function closeNav() {document.getElementById("mySidenav").style.width = "0";}
+</script>
+
+<!-- JQuery for overlay generation-->
+<script>
+  $('#postDetailModalDesktop').on('show.bs.modal', function (event) {
+  var tr = $(event.relatedTarget) // Button that triggered the modal
+  var post = tr.data('post_id') // Extract info from data-* attributes
+  var the_post = document.getElementById(post);
+  var post_td = the_post.getElementsByTagName("td");
+  document.getElementById("postDetailDate").innerHTML = post_td[0].innerHTML;
+  document.getElementById("postDetailContact").innerHTML = post_td[2].innerHTML;
+  document.getElementById("postDetailDesc").innerHTML = post_td[3].innerHTML;
+  document.getElementById("postDetailPrice").innerHTML = post_td[1].innerHTML;
+  document.getElementById("postDetailImage").innerHTML = post_td[4].innerHTML;
+  })
+
+  $('#postDetailModalMobile').on('show.bs.modal', function (event) {
+  var div = $(event.relatedTarget) // Button that triggered the modal
+  var post = div.data('post_id') // Extract info from data-* attributes
+  var the_post = document.getElementById(post);
+  var post_span = the_post.getElementsByTagName("span");
+  document.getElementById("postDetailDateMobile").innerHTML = post_span[0].innerHTML;
+  document.getElementById("postDetailContactMobile").innerHTML = post_span[2].innerHTML;
+  document.getElementById("postDetailDescMobile").innerHTML = post_span[3].innerHTML;
+  document.getElementById("postDetailPriceMobile").innerHTML = post_span[1].innerHTML;
+  document.getElementById("postDetailImageMobile").innerHTML = post_span[4].innerHTML;
+  })
+</script>
 
 <!-- JQuery Code to show/hide change password inputs-->
 <script>
