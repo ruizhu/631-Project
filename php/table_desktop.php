@@ -4,12 +4,14 @@
   } else {
     echo "<table class=\"col-12 table table-striped table-hover rounded-bottom\" id=\"main_table\">";
     while($post = mysqli_fetch_assoc($posts)) {
-      echo "<tr data-toggle=\"modal\" data-target=\"#postDetailModel\" id=\"post_id_";
+      echo "<tr data-toggle=\"modal\" data-target=\"#postDetailModalDesktop\" data-post_id=\"post_id_";
+      echo $post["post_id"];
+      echo "\" id=\"post_id_";
       echo $post["post_id"];
       echo "\">";
 
       echo "<td class=\"d-none\">";
-      echo $post["post_id"];
+      echo substr($post["post_date"], 5, 5);
       echo "</td>";
       echo "<td class=\"d-none\">";
       echo $post["price"];

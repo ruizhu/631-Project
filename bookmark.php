@@ -24,7 +24,9 @@
 
 <section class="container">
   <div class="pl-0 pr-0 table-responsive col-sm-12 rounded" id="post_list"><!-- Main List Section-->
-      <?php include('./php/table_desktop.php'); ?>
+      <div class="d-none d-md-block pl-md-0 pr-md-0 table-responsive col-md-12 rounded" id="post_list"><!-- Main List Section-->
+        <?php include('./php/table_desktop.php'); ?>
+      </div><!-- close post_list  Section-->
       <?php include('./php/table_mobile.php'); ?>
 
   </div><!-- close post_list  Section-->
