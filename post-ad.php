@@ -7,19 +7,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title> Aggie Classified | Home </title>
+  <title> Aggie Classified | Post Ad </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/bootstrap.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <!-- backup comment available down here just copy and use. -->
 <!-- -->
 
-<body style="background-color:#ebebeb;">
+<body>
+<!-- Start Header Section -->
 <?php include('./php/header.php'); ?>
+<!-- End Header Section -->
 
 <section class="post_ad">
   <div class="container">

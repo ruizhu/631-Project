@@ -11,22 +11,24 @@
 <head>
   <title> Aggie Classified | Home </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <!-- backup comment available down here just copy and use. -->
 <!-- -->
 
-<body style="background-color:#ebebeb;">
-
+<body>
+<!-- Start Header Section -->
 <?php include('./php/header.php'); ?>
+<!-- End Header Section -->
 
 <!-- Start desktop layout section-->
 <section class="container">
+  <!-- Start desktop category list section-->
   <div class="row">
-    <div class="col-md-3 list-group d-none d-md-block" id="category_list"><!-- Category List Section-->
+    <div class="col-md-3 list-group d-none d-md-block" id="category_list">
       <a href="./index.php?search=" class="list-group-item bg-maroongray text-white">All Categories</a>
       <a href="./index.php?search=Activity%20Partners" class="list-group-item bg-maroongray text-white">Activity Partners</a>
       <a href="./index.php?search=Collections" class="list-group-item bg-maroongray text-white">Collections</a>
@@ -38,14 +40,16 @@
       <a href="./index.php?search=Carpools" class="list-group-item bg-maroongray text-white">Carpools</a>
       <a href="./index.php?search=Sublet&Roommates" class="list-group-item bg-maroongray text-white">Sublet&Roommates</a>
       <a href="./index.php?search=Vehicle" class="list-group-item bg-maroongray text-white">Vehicle</a>
-    </div><!-- close category_list Section-->
+    </div>
+    <!-- End desktop category list section-->
 
-    <div class="d-none d-md-block pl-md-0 pr-md-0 table-responsive col-md-9 rounded" id="post_list"><!-- Main List Section-->
+    <!-- Start desktop post list section-->
+    <div class="d-none d-md-block pl-md-0 pr-md-0 table-responsive col-md-9 rounded" id="post_list">
       <?php include('./php/table_desktop.php'); ?>
-    </div><!-- close post_list  Section-->
+    </div>
+    <!-- End desktop category list section-->
   </div><!-- close section row -->
 </section>
-<!-- *** desktop table goes here***-->
 <!-- End desktop layout section-->
 
 <!-- Start mobile layout section-->
@@ -70,7 +74,7 @@
 <?php include('./php/table_mobile.php') ?>
 <!-- End mobile layout section-->
 
-<!-- Start post detail overlay-->
+<!-- Start desktop post detail overlay-->
 <div class="modal fade" id="postDetailModalDesktop" tabindex="-1" role="dialog" aria-labelledby="postDetailModalTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
@@ -103,7 +107,8 @@
     </div>
   </div>
 </div>
-
+<!-- End desktop post detail overlay-->
+<!-- Start mobile post detail overlay-->
 <div class="modal fade" id="postDetailModalMobile" tabindex="-1" role="dialog" aria-labelledby="postDetailModalTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
@@ -136,7 +141,7 @@
     </div>
   </div>
 </div>
-<!-- End post detail overlay-->
+<!-- End mobile post detail overlay-->
 
 <!-- Load Javascript at end of document to improve performance -->
 <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
@@ -144,11 +149,11 @@
 
 <script>
   function myFunction() {var x = document.getElementById("myFile");}
-
   function openNav() {document.getElementById("mySidenav").style.width = "250px";}
   function closeNav() {document.getElementById("mySidenav").style.width = "0";}
 </script>
 
+<!-- JQuery for overlay generation-->
 <script>
   $('#postDetailModalDesktop').on('show.bs.modal', function (event) {
   var tr = $(event.relatedTarget) // Button that triggered the modal
@@ -161,6 +166,7 @@
   document.getElementById("postDetailPrice").innerHTML = post_td[1].innerHTML;
   document.getElementById("postDetailImage").innerHTML = post_td[4].innerHTML;
   })
+
   $('#postDetailModalMobile').on('show.bs.modal', function (event) {
   var div = $(event.relatedTarget) // Button that triggered the modal
   var post = div.data('post_id') // Extract info from data-* attributes
