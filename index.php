@@ -102,7 +102,7 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default">Bookmark it</button>
+        <button type="button" class="btn btn-default" id="addBookmark">Bookmark it</button>
       </div>
     </div>
   </div>
@@ -178,6 +178,22 @@
   document.getElementById("postDetailPriceMobile").innerHTML = post_span[1].innerHTML;
   document.getElementById("postDetailImageMobile").innerHTML = post_span[4].innerHTML;
   })
+
+  $('#postDetailModalDesktop').on('show.bs.modal', function(event) {
+    var tr = $(event.relatedTarget); // Button that triggered the modal
+    var post = tr.data('post_id'); // Extract info from data-* attributes
+    var the_post = document.getElementById(post);
+    var post_td = the_post.getElementsByTagName("td");
+    var post_id = post_td[5].innerHTML;
+
+    $('#addBookmark').click(function() {
+      var xhttp = new XMLHttpRequest();
+      alert("Bookmark is added successfully!");
+      xhttp.open("GET", "php/add_bookmark.php?post_id=" + post_id, true);
+      xhttp.send();
+    })
+  })
+
 </script>
 
 </body>

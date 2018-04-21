@@ -25,8 +25,9 @@
       echo "<td class=\"d-none\">";
       echo $post["image"];
       echo "</td>";
-
-
+      echo "<td class=\"d-none\">";
+      echo $post["post_id"];
+      echo "</td>";
 
       echo "<td class=\"list_column_icon\" style=\"width: 7%\">";
       if($post["image"] != ''){
