@@ -60,6 +60,18 @@ function get_id_by_email($email) {
     return $result;
   }
 
+  function delete_post($user_id, $post_id) {
+    global $db;
+    $sql = "DELETE FROM bookmark ";
+    $sql .= "WHERE post_id = '" . $post_id . "'";
+    $result = mysqli_query($db, $sql);
+
+    $sql = "DELETE FROM post ";
+    $sql .= "WHERE post_id = '" . $post_id . "'";
+    $result = mysqli_query($db, $sql);
+    return $result;
+  }
+
   function signin($email, $password) {
     global $db;
     $sql = "SELECT * FROM user ";

@@ -90,7 +90,7 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default">Detele Post</button>
+        <button type="button" class="btn btn-default" id="deletePostDesktop">Detele Post</button>
       </div>
     </div>
   </div>
@@ -124,7 +124,7 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default">Detele Post</button>
+        <button type="button" class="btn btn-default"id="deletePostMobile">Detele Post</button>
       </div>
     </div>
   </div>
@@ -201,6 +201,42 @@
   }
   newPassword.onchange = validatePassword;
   confirmNewPassword.onkeyup = validatePassword;
+</script>
+
+<script>
+$('#postDetailModalDesktop').on('show.bs.modal', function(event) {
+  var tr = $(event.relatedTarget); // Button that triggered the modal
+  var post = tr.data('post_id'); // Extract info from data-* attributes
+  var the_post = document.getElementById(post);
+  var post_td = the_post.getElementsByTagName("td");
+  var post_id = post_td[5].innerHTML;
+
+  $('#deletePostDesktop').click(function() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "php/delect_post.php?post_id=" + post_id, true);
+    xhttp.send();
+    if (!alert("Post is deleted successfully!")){
+      window.location.reload();
+    }
+  })
+})
+
+$('#postDetailModalMobile').on('show.bs.modal', function(event) {
+  var tr = $(event.relatedTarget); // Button that triggered the modal
+  var post = tr.data('post_id'); // Extract info from data-* attributes
+  var the_post = document.getElementById(post);
+  var post_span = the_post.getElementsByTagName("span");
+  var post_id = post_span[5].innerHTML;
+
+  $('#deletePostMobile').click(function() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "php/delect_post.php?post_id=" + post_id, true);
+    xhttp.send();
+    if (!alert("Post is deleted successfully!")){
+      window.location.reload();
+    }
+  })
+})
 </script>
 
 </body>

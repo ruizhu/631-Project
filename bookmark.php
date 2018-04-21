@@ -153,9 +153,11 @@
 
       $('#removeBookmarkDesktop').click(function() {
         var xhttp = new XMLHttpRequest();
-        alert("Bookmark is removed successfully!");
         xhttp.open("GET", "php/remove_bookmark.php?post_id=" + post_id, true);
         xhttp.send();
+        if (!alert("Bookmark is removed successfully!")){
+          window.location.reload();
+        }
       })
     })
 
@@ -168,9 +170,11 @@
 
       $('#removeBookmarkMobile').click(function() {
         var xhttp = new XMLHttpRequest();
-        alert("Bookmark is removed successfully!");
         xhttp.open("GET", "php/remove_bookmark.php?post_id=" + post_id, true);
         xhttp.send();
+        if (!alert("Bookmark is removed successfully!")){
+          window.location.reload();
+        }
       })
     })
 
