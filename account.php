@@ -29,9 +29,9 @@
       <div class="col-12  col-md-12">
         <h2>My Account</h2><br>
         <button type="button" class="btn btn-outline-dark" id="changePasswordButton">Change Password</button>
-        <form class="row">
+        <form class="row" action="php/change_password.php" method="post">
           <div class="form-group col-md-4">
-            <input type="password" class="form-control" id="newPassword" placeholder="Password" style="display:none;" required>
+            <input type="password" class="form-control" id="newPassword" name="password" placeholder="Password" style="display:none;" required>
           </div>
           <div class="form-group col-md-4">
             <input type="password" class="form-control" id="confirmNewPassword" placeholder="Confirm Password" style="display:none;" required>
