@@ -1,8 +1,9 @@
 <?php
 $user_id = 3;
-$email = 2;
-$sql = "SELECT user_id FROM user ";
-$sql .= "WHERE email = '" . $email . "'";
+$post_id = 2;
+$sql = "DELETE FROM bookmark ";
+$sql .= "WHERE user_id = '" . $user_id . "' ";
+$sql .= "AND post_id = '" . $post_id . "'";
 
 
   echo $sql;

@@ -23,6 +23,10 @@
       echo "<span class=\"d-none\">";
       echo $post["image"];
       echo "</span>";
+      echo "<span class=\"d-none\">";
+      echo $post["post_id"];
+      echo "</span>";
+
 
       echo "<div class=\"row p-1\">";
       // image logo part

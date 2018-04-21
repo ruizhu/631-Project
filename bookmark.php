@@ -66,7 +66,7 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default">Remove Bookmark</button>
+        <button type="button" class="btn btn-default" id="removeBookmarkDesktop">Remove Bookmark</button>
       </div>
     </div>
   </div>
@@ -100,7 +100,7 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default">Remove Bookmark</button>
+        <button type="button" class="btn btn-default" id="removeBookmarkMobile">Remove Bookmark</button>
       </div>
     </div>
   </div>
@@ -142,6 +142,38 @@
   document.getElementById("postDetailPriceMobile").innerHTML = post_span[1].innerHTML;
   document.getElementById("postDetailImageMobile").innerHTML = post_span[4].innerHTML;
   })
+
+
+    $('#postDetailModalDesktop').on('show.bs.modal', function(event) {
+      var tr = $(event.relatedTarget); // Button that triggered the modal
+      var post = tr.data('post_id'); // Extract info from data-* attributes
+      var the_post = document.getElementById(post);
+      var post_td = the_post.getElementsByTagName("td");
+      var post_id = post_td[5].innerHTML;
+
+      $('#removeBookmarkDesktop').click(function() {
+        var xhttp = new XMLHttpRequest();
+        alert("Bookmark is removed successfully!");
+        xhttp.open("GET", "php/remove_bookmark.php?post_id=" + post_id, true);
+        xhttp.send();
+      })
+    })
+
+    $('#postDetailModalMobile').on('show.bs.modal', function(event) {
+      var tr = $(event.relatedTarget); // Button that triggered the modal
+      var post = tr.data('post_id'); // Extract info from data-* attributes
+      var the_post = document.getElementById(post);
+      var post_span = the_post.getElementsByTagName("span");
+      var post_id = post_span[5].innerHTML;
+
+      $('#removeBookmarkMobile').click(function() {
+        var xhttp = new XMLHttpRequest();
+        alert("Bookmark is removed successfully!");
+        xhttp.open("GET", "php/remove_bookmark.php?post_id=" + post_id, true);
+        xhttp.send();
+      })
+    })
+
 </script>
 
 </body>

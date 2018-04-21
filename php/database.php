@@ -106,6 +106,16 @@ function get_id_by_email($email) {
     return $result;
   }
 
+  function remove_bookmark($user_id, $post_id) {
+    global $db;
+    $sql = "DELETE FROM bookmark ";
+    $sql .= "WHERE user_id = '" . $user_id . "' ";
+    $sql .= "AND post_id = '" . $post_id . "'";
+
+    $result = mysqli_query($db, $sql);
+    return $result;
+  }
+
   function check_bookmarked($user_id, $post_id) {
     global $db;
     $sql = "SELECT post_id FROM bookmark ";

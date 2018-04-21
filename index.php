@@ -102,7 +102,7 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" id="addBookmark">Bookmark it</button>
+        <button type="button" class="btn btn-default" id="addBookmarkDesktop">Bookmark it</button>
       </div>
     </div>
   </div>
@@ -136,7 +136,7 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default">Bookmark it</button>
+        <button type="button" class="btn btn-default" id="addBookmarkMobile">Bookmark it</button>
       </div>
     </div>
   </div>
@@ -186,13 +186,29 @@
     var post_td = the_post.getElementsByTagName("td");
     var post_id = post_td[5].innerHTML;
 
-    $('#addBookmark').click(function() {
+    $('#addBookmarkDesktop').click(function() {
       var xhttp = new XMLHttpRequest();
       alert("Bookmark is added successfully!");
       xhttp.open("GET", "php/add_bookmark.php?post_id=" + post_id, true);
       xhttp.send();
     })
   })
+
+  $('#postDetailModalMobile').on('show.bs.modal', function(event) {
+    var tr = $(event.relatedTarget); // Button that triggered the modal
+    var post = tr.data('post_id'); // Extract info from data-* attributes
+    var the_post = document.getElementById(post);
+    var post_span = the_post.getElementsByTagName("span");
+    var post_id = post_span[5].innerHTML;
+
+    $('#addBookmarkMobile').click(function() {
+      var xhttp = new XMLHttpRequest();
+      alert("Bookmark is added successfully!");
+      xhttp.open("GET", "php/add_bookmark.php?post_id=" + post_id, true);
+      xhttp.send();
+    })
+  })
+
 
 </script>
 
