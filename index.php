@@ -26,7 +26,7 @@
   <!-- End Header Section -->
 
   <!-- Start desktop layout section-->
-  <section class="container">
+  <section class="container" style="margin-bottom: 38px;">
     <!-- Start desktop category list section-->
     <div class="row">
       <div class="col-md-3 list-group d-none d-md-block" id="category_list">
