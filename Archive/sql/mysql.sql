@@ -44,6 +44,14 @@ CREATE TABLE `post` (
   FOREIGN KEY (`user_id`) REFERENCES user(`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+INSERT INTO `post` (`user_id`, `title`, `price`, `contact`, `category`, `purpose`, `description`, `image`)
+VALUES (1, 'Twin size bed for sell', '$90', '888745412', 'Furniture', 'Selling', 'double dust protection; supper clean; free chair', 'https://brandguide.tamu.edu/assets/downloads/logos/TAM-LogoBox.jpg'),
+       (1, 'White desk', '5 dollar', '5547785452', 'Furniture', 'Selling', 'IKEA fashen style', 'https://brandguide.tamu.edu/assets/downloads/logos/TAM-PrimaryMarkA.png'),
+       (2, 'Honda car', 'no more than 1000000 dollars', '8546255452', 'Jobs', 'Looking', 'may need to take me to try the car', 'https://brandguide.tamu.edu/assets/downloads/logos/Box-Stack.svg'),
+       (2, 'Ride to houston', '', '55548521', 'Vehicle', 'Looking', '', '')
+;
+
+
 # Dump of table bookmark
 # ------------------------------------------------------------
 

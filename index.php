@@ -98,7 +98,7 @@
           <b class="col-3 text-right">Price</b><p class="col-9 text-left" id="postDetailPrice"></p>
         </div>
         <div class="row">
-          <img class="col-12" id="postDetailImage">
+          <img class="col-12" id="postDetailImage" alt="Error source of image">
         </div>
       </div>
       <div class="modal-footer">
@@ -132,7 +132,7 @@
           <b class="col-3 text-right">Price</b><p class="col-9 text-left" id="postDetailPriceMobile"></p>
         </div>
         <div class="row">
-          <img class="col-12" id="postDetailImageMobile">
+          <img class="col-12" id="postDetailImageMobile" alt="There is no image for this post.">
         </div>
       </div>
       <div class="modal-footer">
@@ -164,7 +164,7 @@
   document.getElementById("postDetailContact").innerHTML = post_td[2].innerHTML;
   document.getElementById("postDetailDesc").innerHTML = post_td[3].innerHTML;
   document.getElementById("postDetailPrice").innerHTML = post_td[1].innerHTML;
-  document.getElementById("postDetailImage").innerHTML = post_td[4].innerHTML;
+  document.getElementById("postDetailImage").src = post_td[4].innerHTML;
   })
 
   $('#postDetailModalMobile').on('show.bs.modal', function (event) {
@@ -176,7 +176,7 @@
   document.getElementById("postDetailContactMobile").innerHTML = post_span[2].innerHTML;
   document.getElementById("postDetailDescMobile").innerHTML = post_span[3].innerHTML;
   document.getElementById("postDetailPriceMobile").innerHTML = post_span[1].innerHTML;
-  document.getElementById("postDetailImageMobile").innerHTML = post_span[4].innerHTML;
+  document.getElementById("postDetailImageMobile").src = post_span[4].innerHTML;
   })
 
   $('#postDetailModalDesktop').on('show.bs.modal', function(event) {

@@ -152,7 +152,7 @@
   document.getElementById("postDetailContact").innerHTML = post_td[2].innerHTML;
   document.getElementById("postDetailDesc").innerHTML = post_td[3].innerHTML;
   document.getElementById("postDetailPrice").innerHTML = post_td[1].innerHTML;
-  document.getElementById("postDetailImage").innerHTML = post_td[4].innerHTML;
+  document.getElementById("postDetailImage").src = post_td[4].innerHTML;
   })
 
   $('#postDetailModalMobile').on('show.bs.modal', function (event) {
@@ -164,7 +164,7 @@
   document.getElementById("postDetailContactMobile").innerHTML = post_span[2].innerHTML;
   document.getElementById("postDetailDescMobile").innerHTML = post_span[3].innerHTML;
   document.getElementById("postDetailPriceMobile").innerHTML = post_span[1].innerHTML;
-  document.getElementById("postDetailImageMobile").innerHTML = post_span[4].innerHTML;
+  document.getElementById("postDetailImageMobile").src = post_span[4].innerHTML;
   })
 </script>
 
