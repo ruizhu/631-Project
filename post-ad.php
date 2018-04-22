@@ -62,7 +62,7 @@
             <div class="form-group">
               <label for="category">Category</label>
               <select class="form-control" name="category" style="height: 45px;" required>
-                <option disabled selected value style="display:none"> </option>
+                <option class="text-grey" disabled selected value style="display:none">Choose a category of this Ad</option>
                 <option>Activity Partners</option>
                 <option>Collections</option>
                 <option>Books</option>
@@ -83,7 +83,7 @@
             <div class="form-group">
               <label for="purpose">Ad Purpose</label>
               <select class="form-control" name="purpose" style="height: 45px;" required>
-                <option disabled selected value style="display:none"> </option>
+                <option class="text-grey" disabled selected value style="display:none">Choose a purpose of this Ad</option>
                 <option>Looking</option>
                 <option>Selling</option>
               </select>
