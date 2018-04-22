@@ -18,10 +18,8 @@
     $_SESSION["user_id"] = get_id_by_email($email);
     header('Location: ../index.php');
   } else {
-    echo "fail<br />";
-    echo mysqli_error($db);
-    db_disconnect($db);
-    exit;
+    echo "<script>alert(\"Wrong email or password!\")";
+    header('Location: ../signin.php');
   }
 
 ?>
