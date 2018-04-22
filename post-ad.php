@@ -35,7 +35,7 @@
           <div class="form-group">
             <label for="title">Ad Title</label>
             <div class="title_text">
-              <input type="title" class="form-control" id="title" name="title" aria-describedby="title" placeholder="" required>
+              <input type="title" class="form-control" id="title" name="title" aria-describedby="title" placeholder="">
             </div>
             <small id="title" class="form-text">A title is required</small>
           </div>
