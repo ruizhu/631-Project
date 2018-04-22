@@ -18,8 +18,8 @@
     $_SESSION["user_id"] = get_id_by_email($email);
     header('Location: ../index.php');
   } else {
-    echo "<script>alert(\"Wrong email or password!\")";
-    header('Location: ../signin.php');
+    echo "<script>alert(\"Wrong email or password!\");";
+    echo "window.location.href = \"../signin.php\";</script>";
   }
 
 ?>
