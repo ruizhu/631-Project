@@ -34,7 +34,9 @@
         <!-- End bookmark table section for desktop-->
 
         <!-- Start bookmark table section for mobile-->
-        <?php include('./php/table_mobile.php'); ?>
+        <div class="pb-5">
+          <?php include('./php/table_mobile.php') ?>
+        </div>
         <!-- End bookmark table section for mobile-->
     </div>
   </section>

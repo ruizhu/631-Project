@@ -26,7 +26,7 @@
   <!-- End Header Section -->
 
   <!-- Start desktop layout section-->
-  <section class="container" style="margin-bottom: 38px;">
+  <section class="container pb-5">
     <!-- Start desktop category list section-->
     <div class="row">
       <div class="col-md-3 list-group d-none d-md-block" id="category_list">
@@ -71,8 +71,9 @@
       <li><a class="text-white" href="./index.php?search=Vehicle">Vehicle</a></li>
     </ul>
   </div>
-
-  <?php include('./php/table_mobile.php') ?>
+  <div class="pb-5">
+    <?php include('./php/table_mobile.php') ?>
+  </div>
   <!-- End mobile layout section-->
 
   <!-- Start desktop post detail overlay-->
