@@ -35,7 +35,7 @@
           <div class="form-group">
             <label for="title">Ad Title</label>
             <div class="title_text">
-              <input type="title" class="form-control" id="title" name="title" aria-describedby="title" placeholder="">
+              <input type="title" class="form-control" id="title" name="title" aria-describedby="title" placeholder="" required>
             </div>
             <small id="title" class="form-text">A title is required</small>
           </div>
@@ -111,13 +111,14 @@
       <div class="space10"></div>
       <div class="row">
         <div class="col-12">
-          <h2>New Uploads</h2>
+          <!-- <h2>New Uploads</h2>
           <hr>
           <div class="upload_file">
             <button type="button" class="btn btn_upload"> <input type="file" id="myFile"> Upload images... </input></button>
-          </div>
-          <button type="submit" class="btn btn_upload">Save</button>
+          </div> -->
+          <button type="submit" class="btn btn_upload">Post</button>
           <button type="button"  class="btn btn_cancel">Cancel</button>
+          <hr>
           <div class="space20"></div>
         </div>
       </div>
