@@ -55,7 +55,9 @@
           <div class="d-none d-md-block pl-md-0 pr-md-0 table-responsive col-md-12 rounded" id="post_list">
             <?php include('./php/table_desktop.php'); ?>
           </div>
-          <?php include('./php/table_mobile.php'); ?>
+          <div class="pb-5">
+            <?php include('./php/table_mobile.php') ?>
+          </div>
           <!-- End my post section-->
           <hr>
         </div>
