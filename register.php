@@ -21,8 +21,25 @@
     <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email example@tamu.edu" required autofocus>
     <label for="inputPassword" class="sr-only">Password</label>
     <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <div class="checkbox mb-3 text-white">
+      <label class="register_link">You could signin here too!</label>
+    </div>
     <button class="btn btn-lg btn-block" type="submit">Register</button>
     <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
   </form>
 </body>
+
+<script>
+  var inputEmail = document.getElementById("inputEmail");
+  function validateEmail(){
+    if (!inputEmail.value.includes("tamu.edu")) {
+      inputEmail.setCustomValidity("Please use TAMU email address in registeration!");
+    } else {
+      inputEmail.setCustomValidity('');
+    }
+  }
+  inputEmail.onkeyup = validateEmail;
+</script>
+
+
 </html>
