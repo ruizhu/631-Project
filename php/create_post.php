@@ -9,14 +9,14 @@
   $description = $_POST['description'] ?? '';
   $image = $_POST['image'] ?? '';
 
-  addslashes($title);
-  addslashes($price);
-  addslashes($contact);
-  addslashes($category);
-  addslashes($purpose);
-  addslashes($description);
-  addslashes($image);
-  
+  $title = addslashes($title);
+  $price = addslashes($price);
+  $contact = addslashes($contact);
+  $category = addslashes($category);
+  $purpose = addslashes($purpose);
+  $description = addslashes($description);
+  $image = addslashes($image);
+
   $result = create_post($user_id, $title, $price, $contact, $category, $purpose, $description, $image);
 
   if($result) {
