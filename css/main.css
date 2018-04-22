@@ -3,21 +3,26 @@
 
 /* Universal Style for all pages*/
 
-body{
+html, body{
   font-family: 'Open Sans', sans-serif;
   background-color:#ebebeb;
+  height: 100%;
+}
+.page-container{
+  min-height: 100%;
+  margin-bottom: -32px;
+}
+.footer,
+.footer-push {
+  height: 32px;
 }
 
 a:focus,a:hover {
     text-decoration: none;
     transition: 300ms ease-in-out;
 }
-.decoration-none{
-  text-decoration: none;
-}
-
 *:focus {outline: #500000;}
-
+.decoration-none{text-decoration: none;}
 .list-group-item{font-size: 0.9rem;}
 .nav-font {font-size: 0.7rem;}
 
@@ -29,8 +34,6 @@ a:focus,a:hover {
 .bg-maroongray:active {background-color: #402B2B;}
 .material-icons.md-light { color: rgba(255, 255, 255, 1); }
 .material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
-
-
 
 /* index page Style*/
 #post_list, #post_list a{

@@ -35,7 +35,7 @@
       }
       echo "</td>";
 
-      echo "<td class=\"list_column_title\" style=\"width: 50%\">";
+      echo "<td class=\"list_column_title\" style=\"width: 45%\">";
       echo $post["title"];
       echo "</td>";
 
@@ -54,7 +54,7 @@
       } else {
         echo "<td class=\"list_column_icon\" style=\"width: 7%\"><i class=\"material-icons\">search</i></td>";
       }
-      echo "<td class=\"list_column_price\" style=\"width: 19%\">";
+      echo "<td class=\"list_column_price\" style=\"width: 24%\">";
       echo $post["price"];
       echo "</td>";
       echo "</tr>";

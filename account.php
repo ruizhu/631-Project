@@ -19,117 +19,128 @@
 <!-- -->
 
 <body>
-<!-- Start Header Section -->
-<?php include('./php/header.php'); ?>
-<!-- End Header Section -->
+<div class="page-container">
+  <!-- Start Header Section -->
+  <?php include('./php/header.php'); ?>
+  <!-- End Header Section -->
 
-<section class="containter">
-  <div class="container">
-    <div class="row">
-      <div class="col-12  col-md-12">
-        <h2>My Account</h2><br>
-        <button type="button" class="btn btn-outline-dark" id="changePasswordButton">Change Password</button>
-        <form class="row" action="php/change_password.php" method="post">
-          <div class="form-group col-md-4">
-            <input type="password" class="form-control" id="newPassword" name="password" placeholder="Password" style="display:none;" required>
-          </div>
-          <div class="form-group col-md-4">
-            <input type="password" class="form-control" id="confirmNewPassword" placeholder="Confirm Password" style="display:none;" required>
-            <small class="invalid-feedback"> Oops! Password doesn't match. </small>
-          </div>
-          <div class="col-md-4">
-            <div class="row ml-5">
-              <button type="submit" class="btn btn-success col-4" id="submitButton" style="display:none;">Submit</button>
-              <button type="button" class="btn btn col-4 offset-1" id="cancelButton" style="display:none;">Cancel</button>
+  <section class="containter">
+    <div class="container">
+      <div class="row">
+        <div class="col-12  col-md-12">
+          <h2>My Account</h2><br>
+          <button type="button" class="btn btn-outline-dark" id="changePasswordButton">Change Password</button>
+          <form class="row" action="php/change_password.php" method="post">
+            <div class="form-group col-md-4">
+              <input type="password" class="form-control" id="newPassword" name="password" placeholder="Password" style="display:none;" required>
             </div>
+            <div class="form-group col-md-4">
+              <input type="password" class="form-control" id="confirmNewPassword" placeholder="Confirm Password" style="display:none;" required>
+              <small class="invalid-feedback"> Oops! Password doesn't match. </small>
+            </div>
+            <div class="col-md-4">
+              <div class="row ml-5">
+                <button type="submit" class="btn btn-success col-4" id="submitButton" style="display:none;">Submit</button>
+                <button type="button" class="btn btn col-4 offset-1" id="cancelButton" style="display:none;">Cancel</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <hr>
+          <h2>My Posts</h2><br>
+          <!-- Start my post section-->
+          <div class="d-none d-md-block pl-md-0 pr-md-0 table-responsive col-md-12 rounded" id="post_list">
+            <?php include('./php/table_desktop.php'); ?>
           </div>
-        </form>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-12">
-        <hr>
-        <h2>My Posts</h2><br>
-        <!-- Start my post section-->
-        <div class="d-none d-md-block pl-md-0 pr-md-0 table-responsive col-md-12 rounded" id="post_list">
-          <?php include('./php/table_desktop.php'); ?>
+          <?php include('./php/table_mobile.php'); ?>
+          <!-- End my post section-->
+          <hr>
         </div>
-        <?php include('./php/table_mobile.php'); ?>
-        <!-- End my post section-->
-        <hr>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Start desktop post detail overlay-->
-<div class="modal fade" id="postDetailModalDesktop" tabindex="-1" role="dialog" aria-labelledby="postDetailModalTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header bg-maroon">
-        <h5 class="text-white" id="postDetailTitle">Post Title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true" class="text-white">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="row">
-          <b class="col-3 text-right">Posted</b><div class="col-9 text-left" id="postDetailDate"></div>
+  <!-- Start desktop post detail overlay-->
+  <div class="modal fade" id="postDetailModalDesktop" tabindex="-1" role="dialog" aria-labelledby="postDetailModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 640px;" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-maroon">
+          <h5 class="text-white" id="postDetailTitle">Post Title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="text-white">&times;</span>
+          </button>
         </div>
-        <div class="row">
-          <b class="col-3 text-right">Contact</b></p><div class="col-9 text-left" id="postDetailContact"></div>
+        <div class="modal-body">
+          <div class="row">
+            <b class="col-3 text-right">Posted</b><div class="col-9 text-left" id="postDetailDate"></div>
+          </div>
+          <div class="row">
+            <b class="col-3 text-right">Contact</b></p><div class="col-9 text-left" id="postDetailContact"></div>
+          </div>
+          <div class="row">
+            <b class="col-md-3 text-md-right">Description</b></p><div class="col-md-9" id="postDetailDesc" style="word-wrap:break-word;"></div>
+          </div>
+          <div class="row">
+            <b class="col-3 text-right">Price</b><p class="col-9 text-left" id="postDetailPrice"></p>
+          </div>
+          <div class="container">
+            <img class="img-fluid" id="postDetailImage" alt="Oops! Image did not display properly.">
+          </div>
         </div>
-        <div class="row">
-          <b class="col-md-3 text-md-right">Description</b></p><div class="col-md-9" id="postDetailDesc" style="word-wrap:break-word;"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" id="deletePostDesktop">Detele Post</button>
         </div>
-        <div class="row">
-          <b class="col-3 text-right">Price</b><p class="col-9 text-left" id="postDetailPrice"></p>
-        </div>
-        <div class="row">
-          <img class="col-12" id="postDetailImage">
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" id="deletePostDesktop">Detele Post</button>
       </div>
     </div>
   </div>
-</div>
-<!-- End desktop post detail overlay-->
-<!-- Start mobile post detail overlay-->
-<div class="modal fade" id="postDetailModalMobile" tabindex="-1" role="dialog" aria-labelledby="postDetailModalTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header bg-maroon">
-        <h5 class="text-white" id="postDetailTitle">Post Title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true" class="text-white">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="row">
-          <b class="col-3 text-right">Posted</b><div class="col-9 text-left" id="postDetailDateMobile"></div>
+  <!-- End desktop post detail overlay-->
+  <!-- Start mobile post detail overlay-->
+  <div class="modal fade" id="postDetailModalMobile" tabindex="-1" role="dialog" aria-labelledby="postDetailModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 640px;" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-maroon">
+          <h5 class="text-white" id="postDetailTitle">Post Title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="text-white">&times;</span>
+          </button>
         </div>
-        <div class="row">
-          <b class="col-3 text-right">Contact</b></p><div class="col-9 text-left" id="postDetailContactMobile"></div>
+        <div class="modal-body">
+          <div class="row">
+            <b class="col-3 text-right">Posted</b><div class="col-9 text-left" id="postDetailDateMobile"></div>
+          </div>
+          <div class="row">
+            <b class="col-3 text-right">Contact</b></p><div class="col-9 text-left" id="postDetailContactMobile"></div>
+          </div>
+          <div class="row">
+            <b class="col-md-3 text-md-right">Description</b></p><div class="col-md-9" id="postDetailDescMobile" style="word-wrap:break-word;"></div>
+          </div>
+          <div class="row">
+            <b class="col-3 text-right">Price</b><p class="col-9 text-left" id="postDetailPriceMobile"></p>
+          </div>
+          <div class="container">
+            <img class="img-fluid" id="postDetailImageMobile" alt="Oops! Image did not display properly.">
+          </div>
         </div>
-        <div class="row">
-          <b class="col-md-3 text-md-right">Description</b></p><div class="col-md-9" id="postDetailDescMobile" style="word-wrap:break-word;"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default"id="deletePostMobile">Detele Post</button>
         </div>
-        <div class="row">
-          <b class="col-3 text-right">Price</b><p class="col-9 text-left" id="postDetailPriceMobile"></p>
-        </div>
-        <div class="row">
-          <img class="col-12" id="postDetailImageMobile">
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default"id="deletePostMobile">Detele Post</button>
       </div>
     </div>
   </div>
+  <!-- End mobile post detail overlay-->
+  <div class="push"></div>
 </div>
-<!-- End mobile post detail overlay-->
+
+<!-- Start Footer Section -->
+<footer class="footer">
+  <div class="container-fluid bg-maroon text-center p-1">
+    <span class="text-white">Copyright &copy; Aggie Classified 2018</span>
+  </div>
+</footer>
+<!-- End Footer Section -->
 
 <!-- Load Javascript at end of document to improve performance -->
 <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
