@@ -3,6 +3,9 @@
   $email = $_POST['email'] ?? '';
   $password = $_POST['password'] ?? '';
 
+  $email = addslashes($email);
+  $password = addslashes($password);
+
   if (check_account_exist($email)) {
     $result = signin($email, $password);
   } else {
