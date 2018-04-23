@@ -161,6 +161,7 @@
   var post = tr.data('post_id') // Extract info from data-* attributes
   var the_post = document.getElementById(post);
   var post_td = the_post.getElementsByTagName("td");
+  document.getElementById("postDetailTitle").innerHTML = post_td[6].innerHTML;
   document.getElementById("postDetailDate").innerHTML = post_td[0].innerHTML;
   document.getElementById("postDetailContact").innerHTML = post_td[2].innerHTML;
   document.getElementById("postDetailDesc").innerHTML = post_td[3].innerHTML;
@@ -176,6 +177,7 @@
   var post = div.data('post_id') // Extract info from data-* attributes
   var the_post = document.getElementById(post);
   var post_span = the_post.getElementsByTagName("span");
+  document.getElementById("postDetailTitle").innerHTML = post_td[6].innerHTML;
   document.getElementById("postDetailDateMobile").innerHTML = post_span[0].innerHTML;
   document.getElementById("postDetailContactMobile").innerHTML = post_span[2].innerHTML;
   document.getElementById("postDetailDescMobile").innerHTML = post_span[3].innerHTML;
