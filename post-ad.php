@@ -127,13 +127,13 @@
     </div>
   </section>
   <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="javascript:void(0)" class="closebtn h5" onclick="closeNav()">&times;</a>
     <h5>Categories</h5>
     <ul class="list-unstyled category_ul">
       <li><a class="text-white" href="./index.php?search=">All Categories</a></li>
       <li><a class="text-white" href="./index.php?search=Activity Partners">Activity Partners</a></li>
       <li><a class="text-white" href="./index.php?search=Collections">Collections</a></li>
-      <li><a class="text-white" href="./index.php?search=Rooks">Rooks</a></li>
+      <li><a class="text-white" href="./index.php?search=Books">Books</a></li>
       <li><a class="text-white" href="./index.php?search=Electronics">Electronics</a></li>
       <li><a class="text-white" href="./index.php?search=Furniture">Furniture</a></li>
       <li><a class="text-white" href="./index.php?search=Jobs">Jobs</a></li>
