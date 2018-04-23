@@ -1,4 +1,7 @@
 <?php
+  if (mysqli_num_rows($posts) == 0) {
+    echo "<p>There is no post yet.</p>";
+  }
   mysqli_data_seek($posts, 0);
   while($post = mysqli_fetch_assoc($posts)) {
     echo "<section class=\"d-block d-md-none container pl-2 pr-1 mb-2\">";
