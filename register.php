@@ -18,7 +18,7 @@
     <img class="mb-4" src="images/logo.png" alt="" width="270" height="90">
     <h1 class="h3 mb-3 font-weight-normal text-white">Please register</h1>
     <label for="inputEmail" class="sr-only">Email address</label>
-    <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email example@tamu.edu" required autofocus>
+    <input type="email" name="email" id="inputEmail" class="form-control" placeholder="example@tamu.edu" required autofocus>
     <label for="inputPassword" class="sr-only">Password</label>
     <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
     <div class="checkbox mb-3 text-white">
