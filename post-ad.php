@@ -153,5 +153,11 @@
 </footer>
 <!-- End Footer Section -->
 
+<script>
+  function myFunction() {var x = document.getElementById("myFile");}
+  function openNav() {document.getElementById("mySidenav").style.width = "250px";}
+  function closeNav() {document.getElementById("mySidenav").style.width = "0";}
+</script>
+
 </body>
 </html>
