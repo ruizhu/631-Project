@@ -30,25 +30,26 @@
 </body>
 
 <script>
-  var inputEmail = document.getElementById("inputEmail");
+  var inputEmail = document.getElementById("inputEmail").value;
   function validateEmail(){
-    if (!inputEmail.value.includes("tamu.edu")) {
+    if (!inputEmail.includes("tamu.edu")) {
       inputEmail.setCustomValidity("Please use TAMU email address in registeration.");
     } else {
       inputEmail.setCustomValidity('');
     }
   }
   inputEmail.onkeyup = validateEmail;
-
-  var inputPassword = document.getElementById("inputPassword");
+</script>
+<script>
+  var inputPassword = document.getElementById("inputPassword").value;
   function validatePasswordLength(){
-    if (inputPassword.value.length < 8) {
+    if (inputPassword.length < 8) {
       inputPassword.setCustomValidity("Password need to be at least 8 charasters.");
     } else {
       inputPassword.setCustomValidity('');
     }
   }
-  inputPassword.onkeyup = validatePasswordLength
+  inputPassword.onkeyup = validatePasswordLength;
 </script>
 
 
