@@ -89,7 +89,7 @@
             <b class="col-3 text-right">Price</b><p class="col-9 text-left" id="postDetailPrice"></p>
           </div>
           <div class="container">
-            <img class="img-fluid" id="postDetailImage" alt="Oops! Image did not display properly.">
+            <img class="img-fluid" id="postDetailImage">
           </div>
         </div>
         <div class="modal-footer">
@@ -123,7 +123,7 @@
             <b class="col-3 text-right">Price</b><p class="col-9 text-left" id="postDetailPriceMobile"></p>
           </div>
           <div class="container">
-            <img class="img-fluid" id="postDetailImageMobile" alt="Oops! Image did not display properly.">
+            <img class="img-fluid" id="postDetailImageMobile">
           </div>
         </div>
         <div class="modal-footer">
@@ -165,7 +165,10 @@
   document.getElementById("postDetailContact").innerHTML = post_td[2].innerHTML;
   document.getElementById("postDetailDesc").innerHTML = post_td[3].innerHTML;
   document.getElementById("postDetailPrice").innerHTML = post_td[1].innerHTML;
-  document.getElementById("postDetailImage").src = post_td[4].innerHTML;
+  if (post_td[4].innerHTML.length >= 1) {
+    document.getElementById("postDetailImage").src = post_td[4].innerHTML;
+    document.getElementById("postDetailImage").alt = "Oops! Image did not display properly.";
+  }
   })
 
   $('#postDetailModalMobile').on('show.bs.modal', function (event) {
@@ -177,7 +180,10 @@
   document.getElementById("postDetailContactMobile").innerHTML = post_span[2].innerHTML;
   document.getElementById("postDetailDescMobile").innerHTML = post_span[3].innerHTML;
   document.getElementById("postDetailPriceMobile").innerHTML = post_span[1].innerHTML;
-  document.getElementById("postDetailImageMobile").src = post_span[4].innerHTML;
+  if (post_td[4].innerHTML.length >= 1) {
+    document.getElementById("postDetailImage").src = post_td[4].innerHTML;
+    document.getElementById("postDetailImage").alt = "Oops! Image did not display properly.";
+  }
   })
 </script>
 
