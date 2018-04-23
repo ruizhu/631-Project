@@ -33,12 +33,22 @@
   var inputEmail = document.getElementById("inputEmail");
   function validateEmail(){
     if (!inputEmail.value.includes("tamu.edu")) {
-      inputEmail.setCustomValidity("Please use TAMU email address in registeration!");
+      inputEmail.setCustomValidity("Please use TAMU email address in registeration.");
     } else {
       inputEmail.setCustomValidity('');
     }
   }
   inputEmail.onkeyup = validateEmail;
+
+  var inputPassword = document.getElementById("inputPassword");
+  function validatePasswordLength(){
+    if (inputPassword.value.length < 8) {
+      inputPassword.setCustomValidity("Password need to be at least 8 charasters.");
+    } else {
+      inputPassword.setCustomValidity('');
+    }
+  }
+  inputPassword.onkeyup = validatePasswordLength
 </script>
 
 
