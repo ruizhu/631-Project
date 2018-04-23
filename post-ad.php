@@ -118,7 +118,7 @@
               <button type="button" class="btn btn_upload"> <input type="file" id="myFile"> Upload images... </input></button>
             </div> -->
             <button type="submit" class="btn btn_upload">Post</button>
-            <button type="Cancel" class="btn btn_cancel">Cancel</button>
+            <button type="cancel" class="btn btn_cancel">Cancel</button>
             <hr>
             <div class="space20"></div>
           </div>
