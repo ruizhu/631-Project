@@ -132,6 +132,23 @@
       </div>
     </div>
   </div>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <h5>Categories</h5>
+    <ul class="list-unstyled category_ul">
+      <li><a class="text-white" href="./index.php?search=">All Categories</a></li>
+      <li><a class="text-white" href="./index.php?search=Activity Partners">Activity Partners</a></li>
+      <li><a class="text-white" href="./index.php?search=Collections">Collections</a></li>
+      <li><a class="text-white" href="./index.php?search=Rooks">Rooks</a></li>
+      <li><a class="text-white" href="./index.php?search=Electronics">Electronics</a></li>
+      <li><a class="text-white" href="./index.php?search=Furniture">Furniture</a></li>
+      <li><a class="text-white" href="./index.php?search=Jobs">Jobs</a></li>
+      <li><a class="text-white" href="./index.php?search=Lost&Found">Lost&amp;Found</a></li>
+      <li><a class="text-white" href="./index.php?search=Carpools">Carpools</a></li>
+      <li><a class="text-white" href="./index.php?search=Sublet&Roommates">Sublet&amp;Roommates</a></li>
+      <li><a class="text-white" href="./index.php?search=Vehicle">Vehicle</a></li>
+    </ul>
+  </div>
   <!-- End mobile post detail overlay-->
   <div class="push"></div>
 </div>
