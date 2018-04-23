@@ -166,9 +166,12 @@
   document.getElementById("postDetailContact").innerHTML = post_td[2].innerHTML;
   document.getElementById("postDetailDesc").innerHTML = post_td[3].innerHTML;
   document.getElementById("postDetailPrice").innerHTML = post_td[1].innerHTML;
-  if (post_td[4].innerHTML.length >= 1) {
+  if (post_td[4].innerHTML.length >= 5) {
     document.getElementById("postDetailImage").src = post_td[4].innerHTML;
     document.getElementById("postDetailImage").alt = "Oops! Image did not display properly.";
+  } else {
+    document.getElementById("postDetailImage").src = "";
+    document.getElementById("postDetailImage").alt = "";
   }
   })
 
@@ -177,14 +180,17 @@
   var post = div.data('post_id') // Extract info from data-* attributes
   var the_post = document.getElementById(post);
   var post_span = the_post.getElementsByTagName("span");
-  document.getElementById("postDetailTitle").innerHTML = post_td[6].innerHTML;
+  document.getElementById("postDetailTitle").innerHTML = post_span[6].innerHTML;
   document.getElementById("postDetailDateMobile").innerHTML = post_span[0].innerHTML;
   document.getElementById("postDetailContactMobile").innerHTML = post_span[2].innerHTML;
   document.getElementById("postDetailDescMobile").innerHTML = post_span[3].innerHTML;
   document.getElementById("postDetailPriceMobile").innerHTML = post_span[1].innerHTML;
-  if (post_td[4].innerHTML.length >= 1) {
-    document.getElementById("postDetailImage").src = post_td[4].innerHTML;
-    document.getElementById("postDetailImage").alt = "Oops! Image did not display properly.";
+  if (post_span[4].innerHTML.length >= 5) {
+    document.getElementById("postDetailImageMobile").src = post_span[4].innerHTML;
+    document.getElementById("postDetailImageMobile").alt = "Oops! Image did not display properly.";
+  } else {
+    document.getElementById("postDetailImageMobile").src = "";
+    document.getElementById("postDetailImageMobile").alt = "";
   }
   })
 </script>
