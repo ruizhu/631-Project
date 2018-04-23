@@ -133,7 +133,7 @@
     </div>
   </div>
   <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn h5" onclick="closeNav()">&times;</a>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <h5>Categories</h5>
     <ul class="list-unstyled category_ul">
       <li><a class="text-white" href="./index.php?search=">All Categories</a></li>
