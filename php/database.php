@@ -1,12 +1,12 @@
 <?php
-  // define("DB_SERVER", "localhost");
-  // define("DB_USER", "team27");
-  // define("DB_PASS", "team27admin");
-  // define("DB_NAME", "aggieclassified");
-  define("DB_SERVER", "mysql.hostinger.com");
-  define("DB_USER", "u938701707_27");
+  define("DB_SERVER", "localhost");
+  define("DB_USER", "team27");
   define("DB_PASS", "team27admin");
-  define("DB_NAME", "u938701707_db1");
+  define("DB_NAME", "aggieclassified");
+  // define("DB_SERVER", "mysql.hostinger.com");
+  // define("DB_USER", "u938701707_27");
+  // define("DB_PASS", "team27admin");
+  // define("DB_NAME", "u938701707_db1");
 
   function db_connect() {
     $connection = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
