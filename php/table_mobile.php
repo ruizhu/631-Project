@@ -26,6 +26,9 @@
       echo "<span class=\"d-none\">";
       echo $post["post_id"];
       echo "</span>";
+      echo "<span class=\"d-none\">";
+      echo $post["title"];
+      echo "</span>";
 
 
       echo "<div class=\"row p-1\">";
