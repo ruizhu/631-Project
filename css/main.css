@@ -196,7 +196,8 @@ a:focus,a:hover {
   left: 0;
 }
 #mySidenav a{font-size: 1rem;}
-.sidenav .closebtn {
+
+#sidenav .closebtn {
     position: absolute;
     top: -6px;
     right: 15px;
