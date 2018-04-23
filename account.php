@@ -283,5 +283,17 @@ $('#postDetailModalMobile').on('show.bs.modal', function(event) {
 })
 </script>
 
+<script>
+  var newPassword = document.getElementById("newPassword");
+  function validatePasswordLength(){
+    if (newPassword.value.length < 8) {
+      newPassword.setCustomValidity("Password need to be at least 8 charasters.");
+    } else {
+      newPassword.setCustomValidity('');
+    }
+  }
+  newPassword.onkeyup = validatePasswordLength;
+</script>
+
 </body>
 </html>
