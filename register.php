@@ -30,9 +30,9 @@
 </body>
 
 <script>
-  var inputEmail = document.getElementById("inputEmail").value;
+  var inputEmail = document.getElementById("inputEmail");
   function validateEmail(){
-    if (!inputEmail.includes("tamu.edu")) {
+    if (!inputEmail.value.includes("tamu.edu")) {
       inputEmail.setCustomValidity("Please use TAMU email address in registeration.");
     } else {
       inputEmail.setCustomValidity('');
@@ -41,9 +41,9 @@
   inputEmail.onkeyup = validateEmail;
 </script>
 <script>
-  var inputPassword = document.getElementById("inputPassword").value;
+  var inputPassword = document.getElementById("inputPassword");
   function validatePasswordLength(){
-    if (inputPassword.length < 8) {
+    if (inputPassword.value.length < 8) {
       inputPassword.setCustomValidity("Password need to be at least 8 charasters.");
     } else {
       inputPassword.setCustomValidity('');
